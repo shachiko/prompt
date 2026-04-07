@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cross-platform AI Application - @phungfetti</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#1a1b26',
+                            card: '#24283b',
+                            primary: '#ff9e64',
+                            text: '#a9b1d6'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #1a1b26; color: #a9b1d6; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.8; }
+        .prose p { margin-bottom: 1.5rem; }
+        .prose h2 { color: #fff; font-size: 1.75rem; font-weight: bold; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .prose strong { color: #ff9e64; }
+        
+        /* Language Toggle Logic */
+        html[lang="en"] .lang-vi { display: none !important; }
+        html[lang="vi"] .lang-en { display: none !important; }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-primary selection:text-brand-dark">
+
+    <!-- Navbar Minimal -->
+    <nav class="border-b border-gray-800 bg-brand-dark/90 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="./index.html" class="text-brand-text hover:text-white transition flex items-center gap-2">
+                    <i class="fa-solid fa-arrow-left"></i> 
+                    <span class="lang-en">Back to Home</span>
+                    <span class="lang-vi">Quay lại trang chủ</span>
+                </a>
+                <div class="flex items-center gap-4">
+                    <!-- Language Toggle Button -->
+                    <button onclick="toggleLanguage()" class="text-sm font-bold text-gray-400 hover:text-white transition px-2 py-1 rounded border border-gray-600 hover:border-brand-primary">
+                        <span class="lang-en">🇻🇳 VI</span>
+                        <span class="lang-vi">🇺🇸 EN</span>
+                    </button>
+                    
+                    <a href="https://promptbase.com/profile/phungfetti?via=phungteacher" target="_blank" rel="noopener noreferrer" class="bg-brand-primary text-brand-dark hover:bg-orange-400 px-4 py-2 rounded-md text-sm font-bold transition hidden sm:block">
+                        <span class="lang-en">PromptBase Store</span>
+                        <span class="lang-vi">Cửa hàng PromptBase</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Content -->
+    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <header class="mb-10 text-center">
+            <div class="flex items-center justify-center gap-3 text-sm text-brand-primary font-bold mb-4 uppercase tracking-wider">
+                <span>Dropshipping & AI</span>
+                <span>&bull;</span>
+                <span class="lang-en">March 31, 2026</span>
+                <span class="lang-vi">31 Tháng 3, 2026</span>
+            </div>
+            
+            <h1 class="lang-en text-4xl sm:text-5xl font-extrabold text-white mb-6 leading-tight">Cross-platform AI Application (Shopify, Etsy) to automate sales funnels</h1>
+            <h1 class="lang-vi text-4xl sm:text-5xl font-extrabold text-white mb-6 leading-tight">Ứng dụng AI đa nền tảng (Shopify, Etsy) để tự động hóa phễu bán hàng</h1>
+            
+            <div class="flex items-center justify-center gap-4 text-sm">
+                <img src="https://api.dicebear.com/7.x/bottts/svg?seed=phungfetti" class="w-10 h-10 rounded-full bg-brand-card ring-2 ring-brand-primary" alt="Author">
+                <div class="text-left">
+                    <p class="text-white font-bold">Mr. Dinh (@phungfetti)</p>
+                    <p class="lang-en text-gray-400">AI Educator & Dropshipping Expert</p>
+                    <p class="lang-vi text-gray-400">Chuyên gia Giáo dục AI & Dropshipping</p>
+                </div>
+            </div>
+        </header>
+
+        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Cover Image" class="w-full h-auto rounded-2xl mb-12 shadow-2xl border border-gray-800">
+
+        <div class="prose max-w-none text-lg text-gray-300">
+            <!-- English Content -->
+            <div class="lang-en">
+                <p>In today's fierce e-commerce environment, especially on platforms like Shopify or Etsy, optimizing costs and time is a matter of survival. As a practical dropshipper, I realized: <strong>AI is not magic, it is a thought amplifier.</strong></p>
+
+                <h2>1. Solving the visual problem with Midjourney</h2>
+                <p>Previously, to have a beautiful product photo set on Etsy, you had to hire a studio, models, or buy expensive mockups. Today, with a finely tuned prompt (Prompt Engineering), Midjourney can create hyper-realistic product concepts, placed in the most complex lighting contexts (Cinematic lighting, volumetric rays).</p>
+                <p>The key here is Consistency. You cannot use superficial prompts. You must structure prompts like an algorithm: [Subject] + [Context] + [Lighting] + [Camera specs].</p>
+
+                <h2>2. Claude 3: Product Description Engineer (Copywriting)</h2>
+                <p>Images attract clicks, but the description is what closes the sale. Unlike ChatGPT, which sometimes writes too 'poetically' and sounds like AI, Claude 3 possesses superior context analysis and natural language capabilities.</p>
+                <p>When I build prompt systems for Claude 3, I always provide it with: (1) Target audience persona, (2) Unique Selling Proposition (USP), and (3) SEO keywords. As a result, the Conversion Rate on my Shopify stores has grown significantly.</p>
+
+                <h2>Conclusion</h2>
+                <p>Automation doesn't mean leaving everything entirely to machines. It requires a rigorous logical mindset to 'teach' machines to do exactly what you want. That's why I create in-depth Prompt sets, distilled from practical experience, to help you move faster.</p>
+            </div>
+            
+            <!-- Vietnamese Content -->
+            <div class="lang-vi">
+                <p>Trong môi trường thương mại điện tử khốc liệt hiện nay, đặc biệt là trên các nền tảng như Shopify hay Etsy, việc tối ưu hóa chi phí và thời gian là bài toán sống còn. Với tư cách là một người làm Dropshipping thực chiến, tôi nhận ra: <strong>AI không phải là phép màu, nó là công cụ khuếch đại tư duy.</strong></p>
+
+                <h2>1. Giải quyết bài toán hình ảnh bằng Midjourney</h2>
+                <p>Trước đây, để có một bộ ảnh sản phẩm đẹp trên Etsy, bạn phải thuê studio, mướn mẫu hoặc mua các mockup đắt tiền. Ngày nay, chỉ với một prompt được tinh chỉnh kỹ lưỡng (Prompt Engineering), Midjourney có thể tạo ra các concept sản phẩm mang tính siêu thực, đặt trong các bối cảnh ánh sáng phức tạp nhất (Cinematic lighting, volumetric rays).</p>
+                <p>Điểm mấu chốt ở đây là tính nhất quán (Consistency). Bạn không thể dùng những prompt hời hợt. Bạn cần cấu trúc prompt như một thuật toán: [Chủ thể] + [Bối cảnh] + [Ánh sáng] + [Thông số kỹ thuật camera].</p>
+
+                <h2>2. Claude 3: Kỹ sư viết mô tả sản phẩm (Copywriting)</h2>
+                <p>Hình ảnh thu hút cú click, nhưng mô tả (Description) mới là thứ chốt sale. Khác với ChatGPT đôi khi viết quá "văn vẻ" và dễ nhận ra văn phong AI, Claude 3 sở hữu khả năng phân tích ngữ cảnh và ngôn ngữ tự nhiên vượt trội.</p>
+                <p>Khi tôi xây dựng hệ thống prompt cho Claude 3, tôi luôn cung cấp cho nó: (1) Chân dung khách hàng mục tiêu, (2) Lợi điểm bán hàng độc nhất (USP), và (3) Từ khóa chuẩn SEO. Kết quả là tỷ lệ chuyển đổi (Conversion Rate) trên các store Shopify của tôi đã tăng trưởng rõ rệt.</p>
+
+                <h2>Kết luận</h2>
+                <p>Tự động hóa không có nghĩa là phó mặc hoàn toàn cho máy móc. Nó đòi hỏi bạn phải có một tư duy logic chặt chẽ để "dạy" máy móc làm đúng ý mình. Đó cũng chính là lý do tôi tạo ra các bộ Prompt chuyên sâu, đúc kết từ kinh nghiệm thực chiến, để giúp bạn đi nhanh hơn.</p>
+            </div>
+        </div>
+
+        <!-- Call To Action (Chốt Sale) -->
+        <div class="mt-16 p-8 bg-brand-card rounded-2xl border border-brand-primary text-center">
+            <h3 class="lang-en text-2xl font-bold text-white mb-4">Want to apply this strategy immediately?</h3>
+            <h3 class="lang-vi text-2xl font-bold text-white mb-4">Muốn áp dụng ngay chiến lược này?</h3>
+            
+            <p class="lang-en mb-6">Get the <strong>"E-com Product Image Creator"</strong> Prompt set that I have pre-optimized. Just copy-paste and change your product name.</p>
+            <p class="lang-vi mb-6">Sở hữu ngay bộ Prompt <strong>"E-com Product Image Creator"</strong> đã được tôi tối ưu hóa sẵn. Chỉ cần copy-paste và thay đổi tên sản phẩm của bạn.</p>
+            
+            <a href="https://promptbase.com/profile/phungfetti?via=phungteacher" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-3 text-lg font-bold rounded-md text-brand-dark bg-brand-primary hover:bg-orange-400 transition shadow-lg shadow-brand-primary/30">
+                <i class="fa-solid fa-cart-shopping mr-2"></i> 
+                <span class="lang-en">Buy E-com Prompt Now ($5.99)</span>
+                <span class="lang-vi">Mua Prompt E-com ngay ($5.99)</span>
+            </a>
+        </div>
+    </article>
+
+    <footer class="bg-brand-dark py-8 border-t border-gray-800 mt-12">
+        <div class="text-center text-gray-500 text-sm">
+            &copy; 2026 Mr. Dinh (@phungfetti). All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Script for Language Toggle -->
+    <script>
+        function toggleLanguage() {
+            const htmlTag = document.documentElement;
+            const currentLang = htmlTag.getAttribute('lang');
+            const newLang = currentLang === 'en' ? 'vi' : 'en';
+            
+            htmlTag.setAttribute('lang', newLang);
+            localStorage.setItem('preferredLanguage', newLang);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferredLanguage');
+            if (savedLang) {
+                document.documentElement.setAttribute('lang', savedLang);
+            }
+        });
+    </script>
+</body>
+</html>

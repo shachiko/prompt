@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@phungfetti - Expert AI Educator & STEM Architect</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#1a1b26',
+                            card: '#24283b',
+                            primary: '#ff9e64',
+                            text: '#a9b1d6'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #1a1b26; color: #a9b1d6; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.8; }
+        .prose p { margin-bottom: 1.5rem; }
+        .prose h2 { color: #fff; font-size: 1.75rem; font-weight: bold; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .prose strong { color: #ff9e64; }
+        .prose blockquote { border-left: 4px solid #ff9e64; padding-left: 1rem; font-style: italic; color: #cbd5e1; margin-bottom: 1.5rem; background-color: rgba(255, 158, 100, 0.05); padding: 1rem; rounded-r-lg; }
+        
+        /* Language Toggle Logic - Core System */
+        html[lang="en"] .lang-vi { display: none !important; }
+        html[lang="vi"] .lang-en { display: none !important; }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-primary selection:text-brand-dark">
+
+    <!-- Universal Navigation -->
+    <nav class="border-b border-gray-800 bg-brand-dark/90 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo clicks to Home -->
+                <a href="javascript:void(0)" onclick="navigateTo('page-home')" class="flex-shrink-0 font-bold text-white text-xl flex items-center gap-2 hover:text-brand-primary transition">
+                    <i class="fa-solid fa-cat text-brand-primary"></i> @phungfetti
+                </a>
+                
+                <div class="flex items-center gap-6">
+                    <div class="hidden md:flex items-baseline space-x-8">
+                        <a href="javascript:void(0)" onclick="navigateTo('page-home')" class="hover:text-white px-3 py-2 rounded-md text-sm font-medium transition">
+                            <span class="lang-en">AI Prompts</span>
+                            <span class="lang-vi">Cửa hàng Prompt</span>
+                        </a>
+                        <a href="javascript:void(0)" onclick="navigateTo('page-home')" class="hover:text-white px-3 py-2 rounded-md text-sm font-medium transition">
+                            <span class="lang-en">Tech Blog</span>
+                            <span class="lang-vi">Blog Kỹ Thuật</span>
+                        </a>
+                        <a href="javascript:void(0)" onclick="navigateTo('page-home')" class="bg-brand-primary text-brand-dark hover:bg-orange-400 px-4 py-2 rounded-md text-sm font-bold transition">
+                            <span class="lang-en">Hire Me ($25/hr)</span>
+                            <span class="lang-vi">Thuê Tôi ($25/hr)</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Language Toggle Button -->
+                    <button onclick="toggleLanguage()" class="text-sm font-bold text-gray-400 hover:text-white transition px-2 py-1 rounded border border-gray-600 hover:border-brand-primary">
+                        <span class="lang-en">🇻🇳 VI</span>
+                        <span class="lang-vi">🇺🇸 EN</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================== -->
+    <!-- SECTION 1: TRANG CHỦ (HOME PAGE)           -->
+    <!-- ========================================== -->
+    <div id="page-home" class="page-section block">
+        <!-- Hero Section -->
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
+                <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
+                    <div class="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold text-brand-primary bg-brand-primary/10 mb-6">
+                        <i class="fa-solid fa-star mr-2"></i> 
+                        <span class="lang-en">Rated 5.0 (15+ Reviews) on PromptBase</span>
+                        <span class="lang-vi">Đánh giá 5.0 (15+ Reviews) trên PromptBase</span>
+                    </div>
+                    <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
+                        <span class="lang-en"><span class="block xl:inline">Optimizing education with</span><span class="block text-brand-primary">Artificial Intelligence</span></span>
+                        <span class="lang-vi"><span class="block xl:inline">Tối ưu hóa giáo dục bằng</span><span class="block text-brand-primary">Trí Tuệ Nhân Tạo</span></span>
+                    </h1>
+                    <p class="mt-3 text-base sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                        <span class="lang-en">Hi, I'm Dinh (<strong>@phungfetti</strong>) - Expert AI Educator & STEM Architect. I design specialized Prompt systems to automate teaching workflows, learning management, and Dropshipping operations.</span>
+                        <span class="lang-vi">Chào bạn, tôi là Đình (<strong>@phungfetti</strong>) - Chuyên gia giáo dục AI & Kiến trúc sư STEM. Tôi thiết kế các hệ thống Prompt chuyên sâu giúp tự động hóa quy trình giảng dạy, quản lý học tập và kinh doanh Dropshipping.</span>
+                    </p>
+                    <div class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0 flex flex-col sm:flex-row gap-4">
+                        <a href="https://promptbase.com/profile/phungfetti?via=phungteacher" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-brand-dark bg-brand-primary hover:bg-orange-400 transition shadow-lg shadow-brand-primary/30">
+                            <i class="fa-solid fa-store mr-2"></i> 
+                            <span class="lang-en">View PromptBase Store</span>
+                            <span class="lang-vi">Xem Cửa Hàng PromptBase</span>
+                        </a>
+                        <a href="javascript:void(0)" onclick="navigateTo('page-home')" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 border border-gray-600 text-base font-medium rounded-md text-white bg-brand-card hover:bg-gray-700 transition">
+                            <i class="fa-solid fa-briefcase mr-2"></i> Custom Work ($25/hr)
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center lg:justify-end">
+                    <div class="relative mx-auto w-full rounded-2xl shadow-lg lg:max-w-md overflow-hidden ring-1 ring-white/10">
+                        <img class="w-full" src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="AI Technology Background">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-dark to-transparent p-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-16 h-16 rounded-full bg-white p-1">
+                                    <img src="https://api.dicebear.com/7.x/bottts/svg?seed=phungfetti" class="w-full h-full rounded-full bg-brand-card" alt="Avatar">
+                                </div>
+                                <div>
+                                    <h3 class="text-white font-bold text-xl">@phungfetti</h3>
+                                    <p class="text-sm">Joined: Feb 2025 | Rank: #1493</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured Prompts Section -->
+        <div id="prompts" class="bg-brand-card py-16">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-base text-brand-primary font-semibold tracking-wide uppercase">
+                        <span class="lang-en">Core Products</span>
+                        <span class="lang-vi">Sản Phẩm Cốt Lõi</span>
+                    </h2>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
+                        <span class="lang-en">Top Performing Prompts</span>
+                        <span class="lang-vi">Top AI Prompts Tốt Nhất</span>
+                    </p>
+                    <p class="mt-4 max-w-2xl text-xl mx-auto">
+                        <span class="lang-en">Prompts designed with engineering frameworks to optimize results for Midjourney, ChatGPT, and Claude.</span>
+                        <span class="lang-vi">Các prompt được thiết kế theo cấu trúc kỹ thuật (Prompt Engineering) giúp tối ưu hóa kết quả cho Midjourney, ChatGPT và Claude.</span>
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Prompt 1 -->
+                    <div class="bg-brand-dark rounded-xl overflow-hidden border border-gray-700 hover:border-brand-primary transition group">
+                        <div class="h-48 bg-gray-800 relative">
+                            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition" alt="Education Prompt">
+                            <div class="absolute top-2 right-2 bg-black/60 backdrop-blur text-white text-xs px-2 py-1 rounded font-bold">ChatGPT</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-white mb-2">STEM Curriculum Generator</h3>
+                            <p class="lang-en text-sm mb-4 line-clamp-2">Automatically generate detailed STEM lesson plans from kindergarten to high school in 1 click.</p>
+                            <p class="lang-vi text-sm mb-4 line-clamp-2">Tự động tạo giáo án STEM chi tiết từ mầm non đến trung học phổ thông chỉ với 1 click.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-brand-primary font-bold text-lg">$4.99</span>
+                                <a href="https://promptbase.com/profile/phungfetti?via=phungteacher" target="_blank" rel="noopener noreferrer" class="text-white hover:text-brand-primary text-sm font-semibold transition">
+                                    <span class="lang-en">Buy now</span>
+                                    <span class="lang-vi">Mua ngay</span>
+                                    <i class="fa-solid fa-arrow-right ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Prompt 2 -->
+                    <div class="bg-brand-dark rounded-xl overflow-hidden border border-gray-700 hover:border-brand-primary transition group">
+                        <div class="h-48 bg-gray-800 relative">
+                            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition" alt="Dropship Prompt">
+                            <div class="absolute top-2 right-2 bg-black/60 backdrop-blur text-white text-xs px-2 py-1 rounded font-bold">Midjourney</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-white mb-2">E-com Product Image Creator</h3>
+                            <p class="lang-en text-sm mb-4 line-clamp-2">Prompt to create hyper-realistic and professional e-commerce product photos (Shopify, Etsy).</p>
+                            <p class="lang-vi text-sm mb-4 line-clamp-2">Prompt tạo ảnh sản phẩm chuẩn thương mại điện tử (Shopify, Etsy) siêu thực và chuyên nghiệp.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-brand-primary font-bold text-lg">$5.99</span>
+                                <a href="https://promptbase.com/profile/phungfetti?via=phungteacher" target="_blank" rel="noopener noreferrer" class="text-white hover:text-brand-primary text-sm font-semibold transition">
+                                    <span class="lang-en">Buy now</span>
+                                    <span class="lang-vi">Mua ngay</span>
+                                    <i class="fa-solid fa-arrow-right ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Prompt 3 -->
+                    <div class="bg-brand-dark rounded-xl overflow-hidden border border-gray-700 hover:border-brand-primary transition group">
+                        <div class="h-48 bg-gray-800 relative">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition" alt="Code Prompt">
+                            <div class="absolute top-2 right-2 bg-black/60 backdrop-blur text-white text-xs px-2 py-1 rounded font-bold">Claude 3</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-white mb-2">Edu-Tool React Coder</h3>
+                            <p class="lang-en text-sm mb-4 line-clamp-2">Prompt structure turning Claude into an elite React developer, specializing in educational tools.</p>
+                            <p class="lang-vi text-sm mb-4 line-clamp-2">Cấu trúc prompt biến Claude thành lập trình viên React xuất sắc, chuyên viết tool cho giáo dục.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-brand-primary font-bold text-lg">$3.99</span>
+                                <a href="https://promptbase.com/profile/phungfetti?via=phungteacher" target="_blank" rel="noopener noreferrer" class="text-white hover:text-brand-primary text-sm font-semibold transition">
+                                    <span class="lang-en">Buy now</span>
+                                    <span class="lang-vi">Mua ngay</span>
+                                    <i class="fa-solid fa-arrow-right ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-10 text-center">
+                    <a href="https://promptbase.com/profile/phungfetti?via=phungteacher" target="_blank" rel="noopener noreferrer" class="text-brand-primary hover:text-white font-semibold transition">
+                        <span class="lang-en">View all prompts on PromptBase</span>
+                        <span class="lang-vi">Xem tất cả prompt trên PromptBase</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog/Articles Section -->
+        <div id="blog" class="py-16">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-extrabold text-white mb-8 border-l-4 border-brand-primary pl-4">
+                    <span class="lang-en">Articles & Analytics</span>
+                    <span class="lang-vi">Bài Viết & Góc Nhìn Phân Tích</span>
+                </h2>
+                
+                <div class="space-y-8">
+                    <!-- Blog Link 1 -->
+                    <article class="bg-brand-card p-6 rounded-xl border border-gray-700 flex flex-col md:flex-row gap-6 items-center">
+                        <div class="md:w-1/3 w-full">
+                            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="rounded-lg w-full h-48 object-cover cursor-pointer" onclick="navigateTo('page-blog-1')" alt="Blog Image">
+                        </div>
+                        <div class="md:w-2/3 flex flex-col justify-center">
+                            <div class="flex items-center gap-2 text-xs text-brand-primary font-bold mb-2">
+                                <span><i class="fa-regular fa-calendar mr-1"></i> <span class="lang-en">March 31, 2026</span><span class="lang-vi">31 Tháng 3, 2026</span></span>
+                                <span>&bull;</span>
+                                <span>Dropshipping & AI</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-3 hover:text-brand-primary transition">
+                                <a href="javascript:void(0)" onclick="navigateTo('page-blog-1')">
+                                    <span class="lang-en">Cross-platform AI Application (Shopify, Etsy) to automate sales funnels</span>
+                                    <span class="lang-vi">Ứng dụng AI đa nền tảng (Shopify, Etsy) để tự động hóa phễu bán hàng</span>
+                                </a>
+                            </h3>
+                            <p class="lang-en text-sm mb-4">Discover how combining Midjourney for hyper-realistic product photos and Claude 3 for SEO descriptions boosts conversion rates by 300% without a studio...</p>
+                            <p class="lang-vi text-sm mb-4">Khám phá cách kết hợp Midjourney để tạo ảnh sản phẩm siêu thực và Claude 3 viết mô tả chuẩn SEO, giúp tăng 300% tỷ lệ chuyển đổi mà không cần thuê studio...</p>
+                            <a href="javascript:void(0)" onclick="navigateTo('page-blog-1')" class="text-white text-sm font-bold border-b border-brand-primary w-max pb-1 hover:text-brand-primary transition cursor-pointer">
+                                <span class="lang-en">Read full article</span>
+                                <span class="lang-vi">Đọc tiếp bài viết</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Link 2 -->
+                    <article class="bg-brand-card p-6 rounded-xl border border-gray-700 flex flex-col md:flex-row gap-6 items-center">
+                        <div class="md:w-1/3 w-full">
+                            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="rounded-lg w-full h-48 object-cover cursor-pointer" onclick="navigateTo('page-blog-2')" alt="Blog Image">
+                        </div>
+                        <div class="md:w-2/3 flex flex-col justify-center">
+                            <div class="flex items-center gap-2 text-xs text-brand-primary font-bold mb-2">
+                                <span><i class="fa-regular fa-calendar mr-1"></i> <span class="lang-en">March 28, 2026</span><span class="lang-vi">28 Tháng 3, 2026</span></span>
+                                <span>&bull;</span>
+                                <span class="lang-en">Education & Engineering</span>
+                                <span class="lang-vi">Giáo dục & Kỹ thuật</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-3 hover:text-brand-primary transition">
+                                <a href="javascript:void(0)" onclick="navigateTo('page-blog-2')">
+                                    <span class="lang-en">From Math & IT Teacher to Prompt Engineer: The Power of Algorithmic Thinking</span>
+                                    <span class="lang-vi">Từ Giáo viên Toán - Tin đến Kỹ sư Prompt: Sức mạnh của Tư duy Thuật toán</span>
+                                </a>
+                            </h3>
+                            <p class="lang-en text-sm mb-4">Why do people with a mathematical logic background possess an absolute advantage when writing Prompts? Analyzing the Chain of Thought structure in AI commanding...</p>
+                            <p class="lang-vi text-sm mb-4">Tại sao những người có nền tảng logic Toán học lại sở hữu lợi thế tuyệt đối khi viết Prompt? Phân tích cấu trúc phân rã logic (Chain of Thought) trong việc ra lệnh cho AI...</p>
+                            <a href="javascript:void(0)" onclick="navigateTo('page-blog-2')" class="text-white text-sm font-bold border-b border-brand-primary w-max pb-1 hover:text-brand-primary transition cursor-pointer">
+                                <span class="lang-en">Read full article</span>
+                                <span class="lang-vi">Đọc tiếp bài viết</span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hire Me CTA -->
+        <div id="contact" class="bg-gradient-to-r from-brand-card to-brand-dark py-16 border-t border-b border-gray-800">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
+                    <span class="lang-en">Need custom AI solutions for your business?</span>
+                    <span class="lang-vi">Cần giải pháp AI tùy chỉnh cho doanh nghiệp?</span>
+                </h2>
+                <p class="mt-4 text-lg leading-6 text-gray-300">
+                    <span class="lang-en">I design automation workflows, craft specialized prompts, and provide strategic AI consulting for Education & E-commerce.</span>
+                    <span class="lang-vi">Tôi nhận thiết kế các luồng AI tự động hóa (Automation workflows), tạo prompt chuyên sâu và tư vấn chiến lược áp dụng AI cho mảng Giáo dục & Thương mại điện tử.</span>
+                </p>
+                <div class="mt-8 flex justify-center gap-4">
+                    <div class="bg-brand-dark px-6 py-4 rounded-lg border border-gray-700 inline-block text-left">
+                        <p class="lang-en text-sm text-gray-400">Hourly Rate</p>
+                        <p class="lang-vi text-sm text-gray-400">Mức giá (Rate)</p>
+                        <p class="text-2xl font-bold text-brand-primary">$25 / hr</p>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <a href="https://promptbase.com/profile/phungfetti?via=phungteacher" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-bold rounded-md text-brand-dark bg-brand-primary hover:bg-orange-400 transition shadow-lg shadow-brand-primary/30">
+                        <i class="fa-solid fa-arrow-up-right-from-square mr-2"></i> 
+                        <span class="lang-en">Contact / Hire me on PromptBase</span>
+                        <span class="lang-vi">Liên hệ / Thuê tôi trên PromptBase</span>
+                    </a>
+                    <p class="mt-4 text-xs text-gray-500">
+                        <span class="lang-en">Or <a href="https://promptbase.com/profile/phungfetti?via=phungteacher" target="_blank" rel="noopener noreferrer" class="text-brand-primary hover:underline">DM me directly via PromptBase platform</a></span>
+                        <span class="lang-vi">Hoặc <a href="https://promptbase.com/profile/phungfetti?via=phungteacher" target="_blank" rel="noopener noreferrer" class="text-brand-primary hover:underline">nhắn tin trực tiếp qua nền tảng PromptBase</a></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ========================================== -->
+    <!-- SECTION 2: BÀI VIẾT 1 (DROPSHIP AI)        -->
+    <!-- ========================================== -->
+    <div id="page-blog-1" class="page-section hidden">
+        <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <!-- Back Button -->
+            <button onclick="navigateTo('page-home')" class="text-brand-primary hover:text-white transition flex items-center gap-2 mb-8 font-bold border border-gray-700 px-4 py-2 rounded-lg bg-brand-card hover:border-brand-primary">
+                <i class="fa-solid fa-arrow-left"></i> 
+                <span class="lang-en">Back to Home</span>
+                <span class="lang-vi">Quay lại trang chủ</span>
+            </button>
+
+            <header class="mb-10 text-center">
+                <div class="flex items-center justify-center gap-3 text-sm text-brand-primary font-bold mb-4 uppercase tracking-wider">
+                    <span>Dropshipping & AI</span>
+                    <span>&bull;</span>
+                    <span class="lang-en">March 31, 2026</span>
+                    <span class="lang-vi">31 Tháng 3, 2026</span>
+                </div>
+                <h1 class="lang-en text-4xl sm:text-5xl font-extrabold text-white mb-6 leading-tight">Cross-platform AI Application (Shopify, Etsy) to automate sales funnels</h1>
+                <h1 class="lang-vi text-4xl sm:text-5xl font-extrabold text-white mb-6 leading-tight">Ứng dụng AI đa nền tảng (Shopify, Etsy) để tự động hóa phễu bán hàng</h1>
+                <div class="flex items-center justify-center gap-4 text-sm">
+                    <img src="https://api.dicebear.com/7.x/bottts/svg?seed=phungfetti" class="w-10 h-10 rounded-full bg-brand-card ring-2 ring-brand-primary" alt="Author">
+                    <div class="text-left">
+                        <p class="text-white font-bold">Mr. Dinh (@phungfetti)</p>
+                        <p class="lang-en text-gray-400">AI Educator & Dropshipping Expert</p>
+                        <p class="lang-vi text-gray-400">Chuyên gia Giáo dục AI & Dropshipping</p>
+                    </div>
+                </div>
+            </header>
+
+            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Cover Image" class="w-full h-auto rounded-2xl mb-12 shadow-2xl border border-gray-800">
+
+            <div class="prose max-w-none text-lg text-gray-300">
+                <!-- English Content -->
+                <div class="lang-en">
+                    <p>In today's fierce e-commerce environment, especially on platforms like Shopify or Etsy, optimizing costs and time is a matter of survival. As a practical dropshipper, I realized: <strong>AI is not magic, it is a thought amplifier.</strong></p>
+                    <h2>1. Solving the visual problem with Midjourney</h2>
+                    <p>Previously, to have a beautiful product photo set on Etsy, you had to hire a studio, models, or buy expensive mockups. Today, with a finely tuned prompt (Prompt Engineering), Midjourney can create hyper-realistic product concepts, placed in the most complex lighting contexts (Cinematic lighting, volumetric rays).</p>
+                    <p>The key here is Consistency. You cannot use superficial prompts. You must structure prompts like an algorithm: [Subject] + [Context] + [Lighting] + [Camera specs].</p>
+                    <h2>2. Claude 3: Product Description Engineer (Copywriting)</h2>
+                    <p>Images attract clicks, but the description is what closes the sale. Unlike ChatGPT, which sometimes writes too 'poetically' and sounds like AI, Claude 3 possesses superior context analysis and natural language capabilities.</p>
+                    <p>When I build prompt systems for Claude 3, I always provide it with: (1) Target audience persona, (2) Unique Selling Proposition (USP), and (3) SEO keywords. As a result, the Conversion Rate on my Shopify stores has grown significantly.</p>
+                    <h2>Conclusion</h2>
+                    <p>Automation doesn't mean leaving everything entirely to machines. It requires a rigorous logical mindset to 'teach' machines to do exactly what you want. That's why I create in-depth Prompt sets, distilled from practical experience, to help you move faster.</p>
+                </div>
+                
+                <!-- Vietnamese Content -->
+                <div class="lang-vi">
+                    <p>Trong môi trường thương mại điện tử khốc liệt hiện nay, đặc biệt là trên các nền tảng như Shopify hay Etsy, việc tối ưu hóa chi phí và thời gian là bài toán sống còn. Với tư cách là một người làm Dropshipping thực chiến, tôi nhận ra: <strong>AI không phải là phép màu, nó là công cụ khuếch đại tư duy.</strong></p>
+                    <h2>1. Giải quyết bài toán hình ảnh bằng Midjourney</h2>
+                    <p>Trước đây, để có một bộ ảnh sản phẩm đẹp trên Etsy, bạn phải thuê studio, mướn mẫu hoặc mua các mockup đắt tiền. Ngày nay, chỉ với một prompt được tinh chỉnh kỹ lưỡng (Prompt Engineering), Midjourney có thể tạo ra các concept sản phẩm mang tính siêu thực, đặt trong các bối cảnh ánh sáng phức tạp nhất (Cinematic lighting, volumetric rays).</p>
+                    <p>Điểm mấu chốt ở đây là tính nhất quán (Consistency). Bạn không thể dùng những prompt hời hợt. Bạn cần cấu trúc prompt như một thuật toán: [Chủ thể] + [Bối cảnh] + [Ánh sáng] + [Thông số kỹ thuật camera].</p>
+                    <h2>2. Claude 3: Kỹ sư viết mô tả sản phẩm (Copywriting)</h2>
+                    <p>Hình ảnh thu hút cú click, nhưng mô tả (Description) mới là thứ chốt sale. Khác với ChatGPT đôi khi viết quá "văn vẻ" và dễ nhận ra văn phong AI, Claude 3 sở hữu khả năng phân tích ngữ cảnh và ngôn ngữ tự nhiên vượt trội.</p>
+                    <p>Khi tôi xây dựng hệ thống prompt cho Claude 3, tôi luôn cung cấp cho nó: (1) Chân dung khách hàng mục tiêu, (2) Lợi điểm bán hàng độc nhất (USP), và (3) Từ khóa chuẩn SEO. Kết quả là tỷ lệ chuyển đổi (Conversion Rate) trên các store Shopify của tôi đã tăng trưởng rõ rệt.</p>
+                    <h2>Kết luận</h2>
+                    <p>Tự động hóa không có nghĩa là phó mặc hoàn toàn cho máy móc. Nó đòi hỏi bạn phải có một tư duy logic chặt chẽ để "dạy" máy móc làm đúng ý mình. Đó cũng chính là lý do tôi tạo ra các bộ Prompt chuyên sâu, đúc kết từ kinh nghiệm thực chiến, để giúp bạn đi nhanh hơn.</p>
+                </div>
+            </div>
+
+            <!-- Call To Action (Chốt Sale) -->
+            <div class="mt-16 p-8 bg-brand-card rounded-2xl border border-brand-primary text-center">
+                <h3 class="lang-en text-2xl font-bold text-white mb-4">Want to apply this strategy immediately?</h3>
+                <h3 class="lang-vi text-2xl font-bold text-white mb-4">Muốn áp dụng ngay chiến lược này?</h3>
+                <p class="lang-en mb-6">Get the <strong>"E-com Product Image Creator"</strong> Prompt set that I have pre-optimized.</p>
+                <p class="lang-vi mb-6">Sở hữu ngay bộ Prompt <strong>"E-com Product Image Creator"</strong> đã được tôi tối ưu hóa sẵn.</p>
+                <a href="https://promptbase.com/profile/phungfetti?via=phungteacher" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-3 text-lg font-bold rounded-md text-brand-dark bg-brand-primary hover:bg-orange-400 transition shadow-lg shadow-brand-primary/30">
+                    <i class="fa-solid fa-cart-shopping mr-2"></i> 
+                    <span class="lang-en">Buy E-com Prompt Now ($5.99)</span>
+                    <span class="lang-vi">Mua Prompt E-com ngay ($5.99)</span>
+                </a>
+            </div>
+        </article>
+    </div>
+
+
+    <!-- ========================================== -->
+    <!-- SECTION 3: BÀI VIẾT 2 (TƯ DUY THUẬT TOÁN)  -->
+    <!-- ========================================== -->
+    <div id="page-blog-2" class="page-section hidden">
+        <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <!-- Back Button -->
+            <button onclick="navigateTo('page-home')" class="text-brand-primary hover:text-white transition flex items-center gap-2 mb-8 font-bold border border-gray-700 px-4 py-2 rounded-lg bg-brand-card hover:border-brand-primary">
+                <i class="fa-solid fa-arrow-left"></i> 
+                <span class="lang-en">Back to Home</span>
+                <span class="lang-vi">Quay lại trang chủ</span>
+            </button>
+
+            <header class="mb-10 text-center">
+                <div class="flex items-center justify-center gap-3 text-sm text-brand-primary font-bold mb-4 uppercase tracking-wider">
+                    <span class="lang-en">Education & Engineering</span>
+                    <span class="lang-vi">Giáo dục & Kỹ thuật</span>
+                    <span>&bull;</span>
+                    <span class="lang-en">March 28, 2026</span>
+                    <span class="lang-vi">28 Tháng 3, 2026</span>
+                </div>
+                <h1 class="lang-en text-4xl sm:text-5xl font-extrabold text-white mb-6 leading-tight">From Math & IT Teacher to Prompt Engineer: The Power of Algorithmic Thinking</h1>
+                <h1 class="lang-vi text-4xl sm:text-5xl font-extrabold text-white mb-6 leading-tight">Từ Giáo viên Toán - Tin đến Kỹ sư Prompt: Sức mạnh của Tư duy Thuật toán</h1>
+                <div class="flex items-center justify-center gap-4 text-sm">
+                    <img src="https://api.dicebear.com/7.x/bottts/svg?seed=phungfetti" class="w-10 h-10 rounded-full bg-brand-card ring-2 ring-brand-primary" alt="Author">
+                    <div class="text-left">
+                        <p class="text-white font-bold">Mr. Dinh (@phungfetti)</p>
+                        <p class="text-gray-400">Expert AI Educator & STEM Architect</p>
+                    </div>
+                </div>
+            </header>
+
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Education and AI Logic" class="w-full h-auto rounded-2xl mb-12 shadow-2xl border border-gray-800 object-cover" style="max-height: 500px;">
+
+            <div class="prose max-w-none text-lg text-gray-300">
+                <!-- English Content -->
+                <div class="lang-en">
+                    <p>Many people mistakenly believe Prompt Engineering is the art of verbal communication. They try to "talk" to AI like a human, using emotions and vague commands. That is the biggest mistake causing AI Hallucinations.</p>
+                    <p>With a background in teaching Math and IT, I realized a core truth: <strong>Writing Prompts is essentially writing Code in Natural Language.</strong> Here are 3 Math-IT mindsets that help me create high-performance Prompts, capable of reprogramming how AI thinks.</p>
+                    <h2>1. Chain of Thought is Problem Decomposition</h2>
+                    <p>In Math, you cannot solve a high-degree equation by just looking at it and guessing the result. You must factorize it, solving each small part. The same applies to AI.</p>
+                    <blockquote>"Instead of asking AI 'Write me a STEM lesson plan', I structure the Prompt in steps: Step 1 - Define objectives, Step 2 - List materials, Step 3 - Design activities, Step 4 - Evaluation criteria. By forcing AI to follow this logical chain, the output is 99% accurate."</blockquote>
+                    <h2>2. Managing Edge Cases like Computer Science</h2>
+                    <p>A good programmer doesn't just write code for the 'happy path'; they write code so the program doesn't crash on invalid inputs (Edge Cases). When designing automation Prompts, I always set up "Conditional Variables" (If/Then).</p>
+                    <p>For example, in my React programming Prompt for education, there is always a command: <em>"If library A is incompatible, automatically fallback to library B and explain the reason"</em>. This risk-prevention mindset ensures the Prompt runs stably regardless of input environments.</p>
+                    <h2>3. Using Variables and Data Structures</h2>
+                    <p>My best-selling Prompts on PromptBase aren't long paragraphs. They are structured with brackets <code>[VARIABLES]</code> and precise Markdown formatting. Modularizing Prompts allows buyers (even tech-novices) to simply plug the right parameters into the right places, and the system runs smoothly like a well-oiled machine.</p>
+                    <h2>Conclusion</h2>
+                    <p>AI is a giant brain, but it needs an "Algorithm" to guide it. Applying pedagogical thinking, mathematical rigor, and IT optimization is the key to unlocking AI's full potential. That's why I don't call myself a Prompt writer, I call myself an <strong>AI System Architect</strong>.</p>
+                </div>
+
+                <!-- Vietnamese Content -->
+                <div class="lang-vi">
+                    <p>Nhiều người lầm tưởng Prompt Engineering (Kỹ thuật viết câu lệnh) là nghệ thuật giao tiếp bằng ngôn từ. Họ cố gắng "nói chuyện" với AI như nói chuyện với một con người, sử dụng cảm xúc và những câu lệnh mơ hồ. Đó là sai lầm lớn nhất khiến AI sinh ra ảo giác (Hallucination).</p>
+                    <p>Với nền tảng nhiều năm giảng dạy Toán và Tin học, tôi nhận ra một sự thật cốt lõi: <strong>Viết Prompt thực chất là viết Code bằng Ngôn ngữ Tự nhiên.</strong> Dưới đây là 3 tư duy Toán - Tin giúp tôi tạo ra những bộ Prompt hiệu suất cao, có thể lập trình lại cách AI suy nghĩ.</p>
+                    <h2>1. Chain of Thought (Chuỗi suy luận) chính là Phân rã bài toán</h2>
+                    <p>Trong Toán học, bạn không thể giải một phương trình bậc cao bằng cách nhìn vào và đoán kết quả. Bạn phải phân tích nó thành các nhân tử, giải quyết từng phần nhỏ. Với AI cũng vậy.</p>
+                    <blockquote>"Thay vì yêu cầu AI 'Hãy viết cho tôi một giáo án STEM', tôi cấu trúc Prompt theo dạng bước: B1 - Xác định mục tiêu, B2 - Liệt kê vật liệu, B3 - Thiết kế hoạt động, B4 - Tiêu chí đánh giá. Khi ép AI đi theo chuỗi logic này, kết quả xuất ra chính xác đến 99%."</blockquote>
+                    <h2>2. Quản trị Edge Cases (Xử lý ngoại lệ) của Tin học</h2>
+                    <p>Một lập trình viên giỏi không chỉ viết code để chương trình chạy đúng, mà phải viết code để chương trình không bị sập khi người dùng nhập sai (Edge Cases). Khi thiết kế Prompt để tự động hóa, tôi luôn thiết lập các "Biến điều kiện" (If/Then).</p>
+                    <p>Ví dụ, trong Prompt lập trình React cho giáo dục của tôi, luôn có câu lệnh: <em>"Nếu thư viện A không tương thích, hãy tự động fallback (chuyển hướng) sang thư viện B và giải thích lý do"</em>. Tư duy phòng ngừa rủi ro này đảm bảo Prompt luôn hoạt động ổn định dù môi trường đầu vào có thay đổi.</p>
+                    <h2>3. Sử dụng Biến số (Variables) và Cấu trúc Data</h2>
+                    <p>Các Prompt bán chạy nhất của tôi trên PromptBase không phải là những đoạn văn dài thòng. Chúng được cấu trúc bằng ngoặc vuông <code>[BIẾN_SỐ]</code> và định dạng Markdown chuẩn xác. Việc module hóa Prompt giúp người mua (dù không rành công nghệ) chỉ cần điền đúng tham số vào đúng chỗ là hệ thống chạy mượt mà như một cỗ máy đã được lên dây cót.</p>
+                    <h2>Kết luận</h2>
+                    <p>AI là một bộ não khổng lồ, nhưng nó cần một "Thuật toán" để dẫn đường. Việc áp dụng tư duy sư phạm, sự chặt chẽ của Toán học và tính tối ưu của Tin học chính là chìa khóa để khai phóng toàn bộ sức mạnh của AI. Đó là lý do tôi không gọi mình là người viết Prompt, tôi gọi mình là <strong>Kiến trúc sư hệ thống AI</strong>.</p>
+                </div>
+            </div>
+
+            <!-- Call To Action (Chốt Sale) -->
+            <div class="mt-16 p-8 bg-brand-card rounded-2xl border border-brand-primary text-center">
+                <h3 class="lang-en text-2xl font-bold text-white mb-4">Need to build an Educational Tool/Software?</h3>
+                <h3 class="lang-vi text-2xl font-bold text-white mb-4">Bạn đang cần xây dựng Tool/Phần mềm Giáo dục?</h3>
+                <p class="lang-en mb-6">Don't code from scratch. Use the <strong>"Edu-Tool React Coder"</strong> Prompt structure - turning Claude 3 into your personal developer, designed with this exact pedagogical and algorithmic mindset.</p>
+                <p class="lang-vi mb-6">Đừng tự mày mò viết code. Hãy sử dụng cấu trúc Prompt <strong>"Edu-Tool React Coder"</strong> - biến Claude 3 thành lập trình viên riêng của bạn, được thiết kế bởi chính tư duy sư phạm và thuật toán này.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://promptbase.com/profile/phungfetti?via=phungteacher" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 text-lg font-bold rounded-md text-brand-dark bg-brand-primary hover:bg-orange-400 transition shadow-lg shadow-brand-primary/30">
+                        <i class="fa-solid fa-code mr-2"></i> 
+                        <span class="lang-en">Buy Code Prompt ($3.99)</span>
+                        <span class="lang-vi">Mua Prompt Code ($3.99)</span>
+                    </a>
+                    <a href="mailto:contact@yourdomain.com" class="inline-flex items-center justify-center px-6 py-3 text-lg font-bold rounded-md text-white bg-transparent border border-gray-500 hover:bg-gray-800 transition">
+                        <i class="fa-solid fa-briefcase mr-2"></i> 
+                        <span class="lang-en">Hire for Custom Tool ($25/hr)</span>
+                        <span class="lang-vi">Thuê viết Custom Tool ($25/hr)</span>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <!-- Universal Footer -->
+    <footer class="bg-brand-dark py-8 border-t border-gray-800 mt-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="text-white font-bold text-xl flex items-center gap-2 mb-4 md:mb-0">
+                <i class="fa-solid fa-cat text-brand-primary"></i> @phungfetti
+            </div>
+            <p class="text-sm text-gray-500">
+                &copy; 2026 Mr. Dinh (AI Educator & STEM Architect). All rights reserved.
+            </p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="https://promptbase.com/profile/phungfetti?via=phungteacher" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition">
+                    <span class="sr-only">Instagram</span><i class="fa-brands fa-instagram text-xl"></i>
+                </a>
+                <a href="https://promptbase.com/profile/phungfetti?via=phungteacher" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition">
+                    <span class="sr-only">X (Twitter)</span><i class="fa-brands fa-x-twitter text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Logic Controller -->
+    <script>
+        // 1. Core Logic: Navigation (Chuyển đổi giao diện trang)
+        function navigateTo(pageId) {
+            // Ẩn tất cả các trang
+            document.querySelectorAll('.page-section').forEach(el => {
+                el.classList.remove('block');
+                el.classList.add('hidden');
+            });
+            // Hiển thị trang được gọi
+            const targetPage = document.getElementById(pageId);
+            if (targetPage) {
+                targetPage.classList.remove('hidden');
+                targetPage.classList.add('block');
+            }
+            // Tự động cuộn lên đầu trang
+            window.scrollTo(0, 0);
+        }
+
+        // 2. Core Logic: Language Toggle (Bộ nhớ ngôn ngữ)
+        function toggleLanguage() {
+            const htmlTag = document.documentElement;
+            const currentLang = htmlTag.getAttribute('lang');
+            const newLang = currentLang === 'en' ? 'vi' : 'en';
+            
+            htmlTag.setAttribute('lang', newLang);
+            localStorage.setItem('preferredLanguage', newLang);
+        }
+
+        // Khôi phục bộ nhớ khi khách tải lại trang
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferredLanguage');
+            if (savedLang) {
+                document.documentElement.setAttribute('lang', savedLang);
+            }
+        });
+    </script>
+</body>
+</html>
