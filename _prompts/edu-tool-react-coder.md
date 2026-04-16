@@ -11,7 +11,7 @@ outcome: Better code prompts with fewer dead ends
 promptbase_url: https://promptbase.com/profile/phungfetti?via=phungteacher
 featured: true
 weight: 3
-image: assets/img/prompts/Cyber-kraken guarding treasure vault.png
+image: /assets/img/prompts/Cyber-kraken guarding treasure vault.png
 ---
 
 ## What this prompt is for
