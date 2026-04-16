@@ -1,0 +1,31 @@
+title: AutoPrompt Shop
+description: AI prompts for PromptBase, education workflows, ecommerce content, and custom prompt systems.
+url: "https://autoprompt.shop"
+baseurl: ""
+lang: en
+timezone: Asia/Ho_Chi_Minh
+markdown: kramdown
+permalink: /blog/:title/
+future: true
+collections:
+  prompts:
+    output: true
+    permalink: /prompts/:name/
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      image: /assets/img/og-cover.svg
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: prompts
+    values:
+      layout: prompt
+exclude:
+  - README.md
