@@ -1,58 +1,57 @@
 ---
 layout: default
-title: "Autoprompt Shop | AI Prompts for Education, Content & E-commerce"
-description: "High-converting AI prompts and custom prompt systems for teachers, creators, researchers, and online sellers."
+title: "Autoprompt Shop | Practical AI Prompts for Education, Content and E-commerce"
+description: "Practical AI prompt systems for teachers, creators, researchers, and online sellers."
 permalink: /
 ---
 
-<section class="hero">
-  <div class="hero-copy">
-    <p class="eyebrow">
-      <span class="lang-en">AI prompts built to do real work</span>
-      <span class="lang-vi">Prompt AI được xây để làm việc thật</span>
+{% assign featured_prompts = site.prompts | slice: 0, 6 %}
+
+<section class="home-shell home-hero">
+  <div class="home-hero__main home-surface">
+    <p class="home-eyebrow">
+      <span class="lang-en">Practical AI prompt systems</span>
+      <span class="lang-vi">Hệ thống prompt AI thực chiến</span>
     </p>
 
-    <h1>
-      <span class="lang-en">Sell smarter, teach faster, and create better with practical prompt systems.</span>
-      <span class="lang-vi">Bán hàng thông minh hơn, dạy học nhanh hơn và tạo nội dung tốt hơn bằng các hệ thống prompt thực chiến.</span>
+    <h1 class="home-title">
+      <span class="lang-en">AI prompts for educators, creators, researchers, and online sellers.</span>
+      <span class="lang-vi">Prompt AI cho giáo viên, người làm nội dung, nhà nghiên cứu và người bán hàng online.</span>
     </h1>
 
-    <p class="lead">
+    <p class="home-lead">
       <span class="lang-en">
-        I build AI prompts for education, content creation, research, and e-commerce. 
-        These are not vague templates. They are structured systems designed to save time, improve output quality, and help you get results faster.
+        I build prompt systems that are clear, reusable, and designed for real outcomes — from lesson planning and content production to research support and e-commerce workflows.
       </span>
       <span class="lang-vi">
-        Tôi xây dựng các prompt AI cho giáo dục, sáng tạo nội dung, nghiên cứu và thương mại điện tử.
-        Đây không phải mấy mẫu prompt chung chung. Chúng là các hệ thống được cấu trúc rõ ràng để tiết kiệm thời gian,
-        nâng chất lượng đầu ra và giúp bạn ra kết quả nhanh hơn.
+        Tôi xây dựng các hệ thống prompt rõ ràng, tái sử dụng được và hướng tới kết quả thực tế — từ soạn bài giảng, sản xuất nội dung cho tới hỗ trợ nghiên cứu và quy trình bán hàng online.
       </span>
     </p>
 
-    <div class="hero-actions">
+    <div class="home-actions">
       <a class="button" href="https://promptbase.com/profile/phungfetti?via=phungteacher" target="_blank" rel="noopener noreferrer">
         <span class="lang-en">Visit PromptBase Store</span>
         <span class="lang-vi">Xem cửa hàng PromptBase</span>
       </a>
 
-      <a class="button button-outline" href="/services/">
+      <a class="button button-outline" href="{{ '/services/' | relative_url }}">
         <span class="lang-en">Hire Me for Custom Prompts</span>
         <span class="lang-vi">Thuê tôi làm prompt theo yêu cầu</span>
       </a>
     </div>
 
-    <div class="trust-row">
-      <span>
+    <div class="home-badges">
+      <span class="home-badge">
         <strong>EN / VI</strong>
         <span class="lang-en">Bilingual support</span>
         <span class="lang-vi">Hỗ trợ song ngữ</span>
       </span>
-      <span>
+      <span class="home-badge">
         <strong>Edu + Ecom</strong>
         <span class="lang-en">Real use cases</span>
         <span class="lang-vi">Ứng dụng thực tế</span>
       </span>
-      <span>
+      <span class="home-badge">
         <strong>$25/hr</strong>
         <span class="lang-en">Custom consulting</span>
         <span class="lang-vi">Tư vấn theo giờ</span>
@@ -60,37 +59,37 @@ permalink: /
     </div>
   </div>
 
-  <aside class="hero-panel card">
-    <p class="eyebrow">
-      <span class="lang-en">What you can get here</span>
-      <span class="lang-vi">Những gì thầy có thể nhận được ở đây</span>
+  <aside class="home-hero__side home-surface home-surface--accent">
+    <p class="home-eyebrow">
+      <span class="lang-en">What you get here</span>
+      <span class="lang-vi">Những gì thầy nhận được ở đây</span>
     </p>
 
-    <h2>
-      <span class="lang-en">Prompt systems that are clear, reusable, and built for conversion.</span>
-      <span class="lang-vi">Các hệ thống prompt rõ ràng, tái sử dụng được và được xây để tạo chuyển đổi.</span>
+    <h2 class="home-side-title">
+      <span class="lang-en">Structured prompts that help you move faster.</span>
+      <span class="lang-vi">Các prompt có cấu trúc giúp thầy làm việc nhanh hơn.</span>
     </h2>
 
-    <ul class="check-list">
+    <ul class="home-checklist">
       <li>
-        <span class="lang-en">Prompt packs for teachers, creators, and online sellers</span>
-        <span class="lang-vi">Bộ prompt cho giáo viên, người làm nội dung và người bán hàng online</span>
+        <span class="lang-en">Ready-to-use prompt packs for teaching, content, and sales workflows</span>
+        <span class="lang-vi">Bộ prompt sẵn dùng cho dạy học, làm nội dung và quy trình bán hàng</span>
       </li>
       <li>
-        <span class="lang-en">Custom prompts for your workflow, niche, or business</span>
-        <span class="lang-vi">Prompt thiết kế riêng theo quy trình, ngách hoặc mô hình kinh doanh của bạn</span>
+        <span class="lang-en">Custom prompt systems built for your niche or business</span>
+        <span class="lang-vi">Hệ thống prompt thiết kế riêng theo ngách hoặc mô hình kinh doanh</span>
       </li>
       <li>
-        <span class="lang-en">Landing pages and blog content that warm up buyers before they click</span>
-        <span class="lang-vi">Landing page và blog giúp làm nóng khách hàng trước khi họ bấm mua</span>
+        <span class="lang-en">Clear landing pages that support conversion instead of just looking fancy</span>
+        <span class="lang-vi">Landing page rõ ràng để hỗ trợ chuyển đổi chứ không chỉ đẹp cho có</span>
       </li>
       <li>
-        <span class="lang-en">Fast support in English and Vietnamese</span>
-        <span class="lang-vi">Hỗ trợ nhanh bằng tiếng Anh và tiếng Việt</span>
+        <span class="lang-en">Fast support in both English and Vietnamese</span>
+        <span class="lang-vi">Hỗ trợ nhanh bằng cả tiếng Anh và tiếng Việt</span>
       </li>
     </ul>
 
-    <div class="panel-cta">
+    <div class="home-side-cta">
       <a class="button" href="mailto:{{ site.data.site.email }}?subject=Custom%20Prompt%20Inquiry&body=Hello%20Mr.%20Dinh%2C%0A%0AI%20want%20to%20ask%20about%20your%20custom%20prompt%20service.%0A">
         <span class="lang-en">Email Me</span>
         <span class="lang-vi">Gửi email cho tôi</span>
@@ -99,47 +98,48 @@ permalink: /
   </aside>
 </section>
 
-<section class="section">
-  <div class="section-head">
+<section class="home-shell home-section">
+  <div class="home-section__head">
     <div>
-      <p class="eyebrow">
+      <p class="home-eyebrow">
         <span class="lang-en">Featured prompts</span>
         <span class="lang-vi">Prompt nổi bật</span>
       </p>
-      <h2>
-        <span class="lang-en">Ready-to-use prompts designed for real outcomes.</span>
-        <span class="lang-vi">Các prompt sẵn sàng sử dụng, được thiết kế để tạo ra kết quả thực tế.</span>
+      <h2 class="home-section__title">
+        <span class="lang-en">Prompt products built for practical results.</span>
+        <span class="lang-vi">Sản phẩm prompt được xây để tạo ra kết quả thực tế.</span>
       </h2>
     </div>
 
-    <a class="text-link" href="/prompts/">
+    <a class="home-link" href="{{ '/prompts/' | relative_url }}">
       <span class="lang-en">Browse all prompts</span>
-      <span class="lang-vi">Xem toàn bộ prompt</span>
+      <span class="lang-vi">Xem tất cả prompt</span>
     </a>
   </div>
 
-  <div class="card-grid">
-    {% assign featured_prompts = site.prompts | slice: 0, 6 %}
+  <div class="home-card-grid">
     {% for prompt in featured_prompts %}
-      <article class="card prompt-card">
+      <article class="home-card">
         {% if prompt.image %}
-          <a class="card-media" href="{{ prompt.url }}">
+          <a class="home-card__media" href="{{ prompt.url | relative_url }}">
             <img src="{{ prompt.image | relative_url }}" alt="{{ prompt.title }}">
           </a>
         {% endif %}
 
-        <div class="card-body">
+        <div class="home-card__body">
           {% if prompt.model %}
-            <p class="card-kicker">{{ prompt.model }}</p>
+            <p class="home-card__kicker">{{ prompt.model }}</p>
           {% endif %}
 
-          <h3><a href="{{ prompt.url }}">{{ prompt.title }}</a></h3>
+          <h3 class="home-card__title">
+            <a href="{{ prompt.url | relative_url }}">{{ prompt.title }}</a>
+          </h3>
 
           {% if prompt.description %}
-            <p>{{ prompt.description }}</p>
+            <p class="home-card__text">{{ prompt.description }}</p>
           {% endif %}
 
-          <div class="meta-row">
+          <div class="home-card__meta">
             {% if prompt.category %}
               <span>{{ prompt.category }}</span>
             {% endif %}
@@ -148,8 +148,8 @@ permalink: /
             {% endif %}
           </div>
 
-          <div class="card-actions">
-            <a class="button button-small button-outline" href="{{ prompt.url }}">
+          <div class="home-card__actions">
+            <a class="button button-outline button-small" href="{{ prompt.url | relative_url }}">
               <span class="lang-en">View details</span>
               <span class="lang-vi">Xem chi tiết</span>
             </a>
@@ -167,110 +167,90 @@ permalink: /
   </div>
 </section>
 
-<section class="section">
-  <div class="section-head">
+<section class="home-shell home-section">
+  <div class="home-section__head">
     <div>
-      <p class="eyebrow">
-        <span class="lang-en">Why clients buy</span>
-        <span class="lang-vi">Vì sao khách hàng chọn mua</span>
+      <p class="home-eyebrow">
+        <span class="lang-en">Why work with me</span>
+        <span class="lang-vi">Vì sao nên làm việc với tôi</span>
       </p>
-      <h2>
-        <span class="lang-en">Because good prompts are not just words. They are systems.</span>
-        <span class="lang-vi">Vì prompt tốt không chỉ là câu chữ. Nó là một hệ thống.</span>
+      <h2 class="home-section__title">
+        <span class="lang-en">Good prompts are not random text. They are systems.</span>
+        <span class="lang-vi">Prompt tốt không phải vài câu chữ ngẫu nhiên. Nó là một hệ thống.</span>
       </h2>
     </div>
   </div>
 
-  <div class="feature-grid">
-    <article class="card feature-card">
+  <div class="home-feature-grid">
+    <article class="home-card home-feature">
       <h3>
         <span class="lang-en">Clear structure</span>
         <span class="lang-vi">Cấu trúc rõ ràng</span>
       </h3>
       <p>
-        <span class="lang-en">
-          Each prompt is designed with reusable logic, variables, and a clean workflow so the output stays more stable.
-        </span>
-        <span class="lang-vi">
-          Mỗi prompt đều được thiết kế với logic tái sử dụng, biến số rõ ràng và quy trình sạch để đầu ra ổn định hơn.
-        </span>
+        <span class="lang-en">Each prompt is built with logic, variables, and a clean flow so the output stays more stable and reusable.</span>
+        <span class="lang-vi">Mỗi prompt được xây với logic, biến số và luồng rõ ràng để đầu ra ổn định hơn và tái sử dụng tốt hơn.</span>
       </p>
     </article>
 
-    <article class="card feature-card">
+    <article class="home-card home-feature">
       <h3>
-        <span class="lang-en">Practical use cases</span>
-        <span class="lang-vi">Ứng dụng thực chiến</span>
+        <span class="lang-en">Built for real work</span>
+        <span class="lang-vi">Xây để làm việc thật</span>
       </h3>
       <p>
-        <span class="lang-en">
-          Built for people who need real outputs: lesson plans, product listings, content systems, research support, and sales assets.
-        </span>
-        <span class="lang-vi">
-          Được xây cho những người cần đầu ra thực sự: giáo án, listing sản phẩm, hệ thống nội dung, hỗ trợ nghiên cứu và tài sản bán hàng.
-        </span>
+        <span class="lang-en">From lesson planning and research support to product pages and sales content, the focus is practical output.</span>
+        <span class="lang-vi">Từ soạn bài, hỗ trợ nghiên cứu cho tới trang sản phẩm và nội dung bán hàng, trọng tâm luôn là đầu ra thực tế.</span>
       </p>
     </article>
 
-    <article class="card feature-card">
+    <article class="home-card home-feature">
       <h3>
-        <span class="lang-en">Saves trial-and-error</span>
+        <span class="lang-en">Less trial-and-error</span>
         <span class="lang-vi">Giảm thử sai</span>
       </h3>
       <p>
-        <span class="lang-en">
-          Instead of spending hours testing weak prompts, you start from a sharper foundation that gets you closer to the result faster.
-        </span>
-        <span class="lang-vi">
-          Thay vì mất hàng giờ thử các prompt yếu, bạn bắt đầu từ một nền tảng sắc hơn để tiến gần kết quả nhanh hơn.
-        </span>
+        <span class="lang-en">You start with a stronger base instead of mất hàng giờ test những prompt yếu và chắp vá.</span>
+        <span class="lang-vi">Thầy bắt đầu từ một nền tảng mạnh hơn thay vì mất hàng giờ test các prompt yếu và chắp vá.</span>
       </p>
     </article>
   </div>
 </section>
 
-<section class="section section-highlight">
-  <div class="split-copy">
-    <div>
-      <p class="eyebrow">
+<section class="home-shell home-section">
+  <div class="home-service">
+    <div class="home-service__copy">
+      <p class="home-eyebrow">
         <span class="lang-en">Custom prompt service</span>
         <span class="lang-vi">Dịch vụ prompt theo yêu cầu</span>
       </p>
 
-      <h2>
-        <span class="lang-en">Need a prompt built specifically for your workflow or niche?</span>
-        <span class="lang-vi">Cần một prompt được thiết kế riêng cho quy trình hoặc ngách của bạn?</span>
+      <h2 class="home-section__title">
+        <span class="lang-en">Need a prompt system designed specifically for your workflow?</span>
+        <span class="lang-vi">Cần một hệ thống prompt được thiết kế riêng cho quy trình của thầy?</span>
       </h2>
 
-      <p class="lead">
-        <span class="lang-en">
-          I also take one-off prompt projects, audits, and structured prompt builds for education, business operations, content production, and online selling.
-        </span>
-        <span class="lang-vi">
-          Tôi cũng nhận các dự án prompt riêng lẻ, audit prompt và xây hệ thống prompt có cấu trúc cho giáo dục, vận hành công việc, sản xuất nội dung và bán hàng online.
-        </span>
+      <p class="home-lead home-lead--small">
+        <span class="lang-en">I also take one-off prompt builds, workflow audits, bilingual prompt assets, and niche prompt systems for education and online business.</span>
+        <span class="lang-vi">Tôi cũng nhận làm prompt riêng lẻ, audit workflow, tài sản prompt song ngữ và hệ thống prompt theo ngách cho giáo dục và kinh doanh online.</span>
       </p>
     </div>
 
-    <div class="card service-box">
-      <p class="eyebrow">
+    <div class="home-card home-service__box">
+      <p class="home-eyebrow">
         <span class="lang-en">Rate</span>
         <span class="lang-vi">Mức phí</span>
       </p>
 
-      <h3>$25/hr</h3>
+      <div class="home-price">$25/hr</div>
 
-      <p>
-        <span class="lang-en">
-          Best for one-off builds, niche prompt systems, workflow audits, and bilingual prompt assets.
-        </span>
-        <span class="lang-vi">
-          Phù hợp cho các job làm prompt riêng, hệ thống prompt theo ngách, audit workflow và tài sản prompt song ngữ.
-        </span>
+      <p class="home-card__text">
+        <span class="lang-en">Best for niche builds, one-off custom prompts, and structured prompt consulting.</span>
+        <span class="lang-vi">Phù hợp cho các job theo ngách, prompt đặt riêng và tư vấn prompt có cấu trúc.</span>
       </p>
 
-      <div class="card-actions">
-        <a class="button" href="/services/">
+      <div class="home-card__actions">
+        <a class="button" href="{{ '/services/' | relative_url }}">
           <span class="lang-en">View Service</span>
           <span class="lang-vi">Xem dịch vụ</span>
         </a>
@@ -284,39 +264,42 @@ permalink: /
   </div>
 </section>
 
-<section class="section">
-  <div class="section-head">
+<section class="home-shell home-section">
+  <div class="home-section__head">
     <div>
-      <p class="eyebrow">
+      <p class="home-eyebrow">
         <span class="lang-en">Latest articles</span>
         <span class="lang-vi">Bài viết mới</span>
       </p>
-      <h2>
-        <span class="lang-en">Useful content that educates, warms up buyers, and supports SEO.</span>
-        <span class="lang-vi">Nội dung hữu ích để giáo dục khách hàng, làm nóng người mua và hỗ trợ SEO.</span>
+      <h2 class="home-section__title">
+        <span class="lang-en">Content that educates buyers and supports search traffic.</span>
+        <span class="lang-vi">Nội dung giúp giáo dục khách hàng và hỗ trợ traffic tìm kiếm.</span>
       </h2>
     </div>
 
-    <a class="text-link" href="/blog/">
+    <a class="home-link" href="{{ '/blog/' | relative_url }}">
       <span class="lang-en">Visit the blog</span>
       <span class="lang-vi">Xem blog</span>
     </a>
   </div>
 
-  <div class="card-grid">
+  <div class="home-card-grid">
     {% for post in site.posts limit:3 %}
-      <article class="card blog-card">
-        <div class="card-body">
-          <p class="card-kicker">{{ post.date | date: "%d/%m/%Y" }}</p>
-          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+      <article class="home-card">
+        <div class="home-card__body">
+          <p class="home-card__kicker">{{ post.date | date: "%d/%m/%Y" }}</p>
+
+          <h3 class="home-card__title">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h3>
 
           {% if post.description %}
-            <p>{{ post.description }}</p>
+            <p class="home-card__text">{{ post.description }}</p>
           {% elsif post.excerpt %}
-            <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
+            <p class="home-card__text">{{ post.excerpt | strip_html | truncate: 150 }}</p>
           {% endif %}
 
-          <a class="text-link" href="{{ post.url }}">
+          <a class="home-link" href="{{ post.url | relative_url }}">
             <span class="lang-en">Read article</span>
             <span class="lang-vi">Đọc bài viết</span>
           </a>
@@ -326,28 +309,24 @@ permalink: /
   </div>
 </section>
 
-<section class="section final-cta">
-  <div class="card cta-box">
-    <p class="eyebrow">
+<section class="home-shell home-section">
+  <div class="home-final home-surface">
+    <p class="home-eyebrow">
       <span class="lang-en">Ready to move faster?</span>
       <span class="lang-vi">Sẵn sàng làm nhanh hơn chưa?</span>
     </p>
 
-    <h2>
-      <span class="lang-en">Start with a prompt, or email me for a custom build.</span>
-      <span class="lang-vi">Bắt đầu với một prompt có sẵn, hoặc email cho tôi để đặt một bản thiết kế riêng.</span>
+    <h2 class="home-section__title">
+      <span class="lang-en">Start with a ready-made prompt, or email me for a custom build.</span>
+      <span class="lang-vi">Bắt đầu bằng một prompt có sẵn, hoặc email cho tôi để đặt bản thiết kế riêng.</span>
     </h2>
 
-    <p class="lead">
-      <span class="lang-en">
-        Whether you are a teacher, creator, researcher, or seller, a stronger prompt system can save you hours and improve your output immediately.
-      </span>
-      <span class="lang-vi">
-        Dù bạn là giáo viên, người làm nội dung, nhà nghiên cứu hay người bán hàng, một hệ thống prompt tốt hơn có thể giúp bạn tiết kiệm hàng giờ và nâng chất lượng đầu ra ngay lập tức.
-      </span>
+    <p class="home-lead home-lead--small">
+      <span class="lang-en">A stronger prompt system can save hours, improve output quality, and help you get to the result faster.</span>
+      <span class="lang-vi">Một hệ thống prompt tốt hơn có thể giúp tiết kiệm hàng giờ, nâng chất lượng đầu ra và đưa thầy tới kết quả nhanh hơn.</span>
     </p>
 
-    <div class="hero-actions">
+    <div class="home-actions home-actions--center">
       <a class="button" href="https://promptbase.com/profile/phungfetti?via=phungteacher" target="_blank" rel="noopener noreferrer">
         <span class="lang-en">Shop Prompts Now</span>
         <span class="lang-vi">Mua prompt ngay</span>
