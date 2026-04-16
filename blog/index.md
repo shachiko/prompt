@@ -9,8 +9,8 @@ permalink: /blog/
 <section class="page-hero">
   <div class="container">
     <p class="eyebrow">Blog</p>
-    <h1><span class="lang-en">Write useful articles. Pre-sell the prompt. Repeat.</span><span class="lang-vi">Viết bài hữu ích. Bán trước ý tưởng của prompt. Lặp lại đều.</span></h1>
-    <p class="lead"><span class="lang-en">This archive is built from Jekyll posts, so every article gets its own URL, metadata, and archive listing automatically.</span><span class="lang-vi">Trang lưu trữ này được dựng từ Jekyll posts, nên mỗi bài viết sẽ tự có URL, metadata và xuất hiện trong archive.</span></p>
+    <h1><span class="lang-en">Useful articles that educate buyers and support conversion.</span><span class="lang-vi">Các bài viết hữu ích giúp giáo dục khách hàng và hỗ trợ chuyển đổi.</span></h1>
+    <p class="lead"><span class="lang-en">Read practical content about prompt design, AI workflows, education use cases, and selling prompts more effectively.</span><span class="lang-vi">Đọc các nội dung thực tế về thiết kế prompt, workflow AI, ứng dụng trong giáo dục và cách bán prompt hiệu quả hơn.</span></p>
   </div>
 </section>
 

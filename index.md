@@ -1,7 +1,9 @@
 ---
 layout: default
 title: "Autoprompt Shop | AI Prompts for Education, Content & E-commerce"
-description: "Structured AI prompts for education, research, content creation, and e-commerce."
+description: "Structured AI prompts for education, content creation, research, and e-commerce."
+seo_title: "Autoprompt Shop | Practical AI Prompts"
+image: /assets/img/og-cover.svg
 permalink: /
 ---
 
@@ -13,7 +15,7 @@ permalink: /
 
   .home-grid{
     display:grid;
-    grid-template-columns:minmax(0,1.45fr) minmax(320px,0.75fr);
+    grid-template-columns:minmax(0,1.35fr) minmax(320px,0.78fr);
     gap:24px;
     align-items:stretch;
   }
@@ -29,12 +31,9 @@ permalink: /
     box-shadow:0 18px 50px rgba(0,0,0,0.18);
   }
 
-  .home-hero{
-    padding:42px;
-  }
-
+  .home-hero{ padding:40px; }
   .home-panel{
-    padding:32px;
+    padding:30px;
     background:
       radial-gradient(circle at top right, rgba(255,161,93,0.12), transparent 36%),
       linear-gradient(180deg, rgba(18,24,49,0.96) 0%, rgba(10,16,36,0.96) 100%);
@@ -51,17 +50,17 @@ permalink: /
 
   .home-title{
     margin:0;
-    max-width:12ch;
-    font-size:clamp(2.2rem, 3.9vw, 4rem);
-    line-height:1.05;
+    max-width:11.5ch;
+    font-size:clamp(2rem, 3.5vw, 3.35rem);
+    line-height:1.07;
     letter-spacing:-0.045em;
     color:#f7f8ff;
   }
 
   .home-subtitle{
     margin:18px 0 0;
-    max-width:60ch;
-    font-size:1.06rem;
+    max-width:61ch;
+    font-size:1.03rem;
     line-height:1.78;
     color:rgba(231,236,255,0.86);
   }
@@ -92,14 +91,12 @@ permalink: /
     font-size:.95rem;
   }
 
-  .home-pill strong{
-    color:#fff;
-  }
+  .home-pill strong{ color:#fff; }
 
   .home-side-title{
     margin:0;
-    font-size:1.65rem;
-    line-height:1.22;
+    font-size:1.5rem;
+    line-height:1.24;
     letter-spacing:-0.03em;
     color:#fff;
   }
@@ -128,9 +125,7 @@ permalink: /
     font-weight:800;
   }
 
-  .home-section{
-    margin-top:30px;
-  }
+  .home-section{ margin-top:30px; }
 
   .home-section-head{
     display:flex;
@@ -142,7 +137,7 @@ permalink: /
 
   .home-section-title{
     margin:0;
-    font-size:clamp(1.5rem, 2vw, 2rem);
+    font-size:clamp(1.45rem, 2vw, 1.9rem);
     line-height:1.2;
     letter-spacing:-0.03em;
     color:#fff;
@@ -154,10 +149,7 @@ permalink: /
     text-decoration:none;
     white-space:nowrap;
   }
-
-  .home-link:hover{
-    text-decoration:underline;
-  }
+  .home-link:hover{ text-decoration:underline; }
 
   .home-cards{
     display:grid;
@@ -165,9 +157,7 @@ permalink: /
     gap:22px;
   }
 
-  .home-product{
-    overflow:hidden;
-  }
+  .home-product{ overflow:hidden; }
 
   .home-product__media{
     display:block;
@@ -182,9 +172,7 @@ permalink: /
     display:block;
   }
 
-  .home-product__body{
-    padding:22px;
-  }
+  .home-product__body{ padding:22px; }
 
   .home-kicker{
     margin:0 0 10px;
@@ -197,7 +185,7 @@ permalink: /
 
   .home-product__title{
     margin:0;
-    font-size:1.2rem;
+    font-size:1.16rem;
     line-height:1.35;
   }
 
@@ -205,10 +193,7 @@ permalink: /
     text-decoration:none;
     color:#fff;
   }
-
-  .home-product__title a:hover{
-    color:#ffa15d;
-  }
+  .home-product__title a:hover{ color:#ffa15d; }
 
   .home-text{
     margin:12px 0 0;
@@ -226,9 +211,7 @@ permalink: /
     font-size:.94rem;
   }
 
-  .home-meta-row strong{
-    color:#fff;
-  }
+  .home-meta-row strong{ color:#fff; }
 
   .home-card-actions{
     display:flex;
@@ -243,9 +226,7 @@ permalink: /
     gap:22px;
   }
 
-  .home-feature{
-    padding:24px;
-  }
+  .home-feature{ padding:24px; }
 
   .home-feature h3{
     margin:0;
@@ -262,60 +243,40 @@ permalink: /
 
   .home-service{
     display:grid;
-    grid-template-columns:minmax(0,1.2fr) minmax(280px,0.8fr);
+    grid-template-columns:minmax(0,1.15fr) minmax(280px,0.8fr);
     gap:22px;
     align-items:stretch;
   }
 
-  .home-service-copy{
-    padding:8px 4px 0 0;
-  }
-
-  .home-service-box{
-    padding:28px;
-  }
+  .home-service-copy{ padding:8px 4px 0 0; }
+  .home-service-box{ padding:28px; }
 
   .home-price{
     margin:10px 0 14px;
-    font-size:2.1rem;
+    font-size:2rem;
     font-weight:800;
     letter-spacing:-0.04em;
     color:#fff;
   }
 
-  .home-post{
-    padding:22px;
-  }
-
-  .home-cta{
-    padding:36px;
-    text-align:center;
-  }
+  .home-post{ padding:22px; }
+  .home-cta{ padding:36px; text-align:center; }
 
   @media (max-width: 1080px){
     .home-cards,
-    .home-features{
-      grid-template-columns:repeat(2, minmax(0,1fr));
-    }
+    .home-features{ grid-template-columns:repeat(2, minmax(0,1fr)); }
   }
 
   @media (max-width: 900px){
     .home-grid,
-    .home-service{
-      grid-template-columns:1fr;
-    }
+    .home-service{ grid-template-columns:1fr; }
 
-    .home-hero{
-      padding:30px;
-    }
-
-    .home-panel{
-      padding:28px;
-    }
+    .home-hero{ padding:30px; }
+    .home-panel{ padding:28px; }
 
     .home-title{
       max-width:100%;
-      font-size:clamp(2rem, 8vw, 3rem);
+      font-size:clamp(1.9rem, 7vw, 2.8rem);
     }
 
     .home-section-head{
@@ -325,25 +286,17 @@ permalink: /
   }
 
   @media (max-width: 680px){
-    .home-wrap{
-      width:min(100% - 20px, 1180px);
-    }
+    .home-wrap{ width:min(100% - 20px, 1180px); }
 
     .home-cards,
-    .home-features{
-      grid-template-columns:1fr;
-    }
+    .home-features{ grid-template-columns:1fr; }
 
     .home-hero,
     .home-panel,
     .home-service-box,
-    .home-cta{
-      padding:22px;
-    }
+    .home-cta{ padding:22px; }
 
-    .home-subtitle{
-      font-size:1rem;
-    }
+    .home-subtitle{ font-size:1rem; }
 
     .home-pill{
       width:100%;
@@ -352,7 +305,7 @@ permalink: /
   }
 </style>
 
-{% assign featured_prompts = site.prompts | slice: 0, 6 %}
+{% assign featured_prompts = site.prompts | where: 'featured', true | sort: 'weight' %}
 
 <div class="home-wrap">
   <section class="home-grid">
@@ -368,16 +321,12 @@ permalink: /
       </h1>
 
       <p class="home-subtitle">
-        <span class="lang-en">
-          I build practical prompt systems for education, content creation, research, and e-commerce. The goal is simple: save time, improve output quality, and help you move faster with AI.
-        </span>
-        <span class="lang-vi">
-          Tôi xây dựng các hệ thống prompt thực chiến cho giáo dục, sáng tạo nội dung, nghiên cứu và thương mại điện tử. Mục tiêu rất rõ: tiết kiệm thời gian, nâng chất lượng đầu ra và giúp thầy đi nhanh hơn với AI.
-        </span>
+        <span class="lang-en">I build practical prompt systems for education, content creation, research, and e-commerce. The goal is simple: save time, improve output quality, and help you move faster with AI.</span>
+        <span class="lang-vi">Tôi xây dựng các hệ thống prompt thực chiến cho giáo dục, sáng tạo nội dung, nghiên cứu và thương mại điện tử. Mục tiêu rất rõ: tiết kiệm thời gian, nâng chất lượng đầu ra và giúp bạn đi nhanh hơn với AI.</span>
       </p>
 
       <div class="home-actions">
-        <a class="button" href="https://promptbase.com/profile/phungfetti?via=phungteacher" target="_blank" rel="noopener noreferrer">
+        <a class="button" href="{{ site.data.site.promptbase_url }}" target="_blank" rel="noopener noreferrer">
           <span class="lang-en">Visit PromptBase Store</span>
           <span class="lang-vi">Xem cửa hàng PromptBase</span>
         </a>
@@ -412,7 +361,7 @@ permalink: /
     <aside class="home-panel">
       <p class="home-eyebrow">
         <span class="lang-en">What you get here</span>
-        <span class="lang-vi">Những gì thầy nhận được ở đây</span>
+        <span class="lang-vi">Những gì bạn nhận được ở đây</span>
       </p>
 
       <h2 class="home-side-title">
@@ -434,8 +383,8 @@ permalink: /
           <span class="lang-vi">Hỗ trợ song ngữ cho cả người dùng tiếng Anh và tiếng Việt</span>
         </li>
         <li>
-          <span class="lang-en">Landing-page style product presentation to support conversion</span>
-          <span class="lang-vi">Trình bày kiểu landing page để hỗ trợ chuyển đổi tốt hơn</span>
+          <span class="lang-en">Prompt pages designed to support conversion, not just fill space</span>
+          <span class="lang-vi">Trang prompt được thiết kế để hỗ trợ chuyển đổi, không phải để lấp chỗ</span>
         </li>
       </ul>
 
@@ -468,7 +417,7 @@ permalink: /
     </div>
 
     <div class="home-cards">
-      {% for prompt in featured_prompts %}
+      {% for prompt in featured_prompts limit: 3 %}
         <article class="home-card home-product">
           {% if prompt.image %}
             <a class="home-product__media" href="{{ prompt.url | relative_url }}">
@@ -490,12 +439,8 @@ permalink: /
             {% endif %}
 
             <div class="home-meta-row">
-              {% if prompt.category %}
-                <span>{{ prompt.category }}</span>
-              {% endif %}
-              {% if prompt.price %}
-                <strong>${{ prompt.price }}</strong>
-              {% endif %}
+              {% if prompt.category %}<span>{{ prompt.category }}</span>{% endif %}
+              {% if prompt.price %}<strong>${{ prompt.price }}</strong>{% endif %}
             </div>
 
             <div class="home-card-actions">
@@ -561,7 +506,7 @@ permalink: /
         </h3>
         <p>
           <span class="lang-en">You do not need to waste hours testing weak prompts from scratch every single time.</span>
-          <span class="lang-vi">Thầy không cần mất hàng giờ test những prompt yếu từ đầu trong mỗi lần làm việc.</span>
+          <span class="lang-vi">Bạn không cần mất hàng giờ test những prompt yếu từ đầu trong mỗi lần làm việc.</span>
         </p>
       </article>
     </div>
@@ -577,7 +522,7 @@ permalink: /
 
         <h2 class="home-section-title">
           <span class="lang-en">Need a prompt system designed for your exact workflow or niche?</span>
-          <span class="lang-vi">Cần một hệ thống prompt thiết kế riêng cho đúng workflow hoặc ngách của thầy?</span>
+          <span class="lang-vi">Cần một hệ thống prompt thiết kế riêng cho đúng workflow hoặc ngách của bạn?</span>
         </h2>
 
         <p class="home-subtitle" style="margin-top:14px;">
@@ -592,7 +537,7 @@ permalink: /
           <span class="lang-vi">Mức phí</span>
         </p>
 
-        <div class="home-price">$25/hr</div>
+        <div class="home-price">{{ site.data.site.hourly_rate }}</div>
 
         <p class="home-text" style="margin-top:0;">
           <span class="lang-en">Best for one-off builds, niche prompt systems, and structured consulting.</span>
@@ -636,7 +581,7 @@ permalink: /
     <div class="home-cards">
       {% for post in site.posts limit:3 %}
         <article class="home-post">
-          <p class="home-kicker">{{ post.date | date: "%d/%m/%Y" }}</p>
+          <p class="home-kicker">{{ post.date | date: '%d/%m/%Y' }}</p>
 
           <h3 class="home-product__title">
             <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
@@ -673,11 +618,11 @@ permalink: /
 
       <p class="home-subtitle" style="max-width:62ch; margin:16px auto 0;">
         <span class="lang-en">A stronger prompt system can save hours, improve output quality, and help you get to the result faster.</span>
-        <span class="lang-vi">Một hệ thống prompt tốt hơn có thể giúp tiết kiệm hàng giờ, nâng chất lượng đầu ra và đưa thầy tới kết quả nhanh hơn.</span>
+        <span class="lang-vi">Một hệ thống prompt tốt hơn có thể giúp tiết kiệm hàng giờ, nâng chất lượng đầu ra và đưa bạn tới kết quả nhanh hơn.</span>
       </p>
 
       <div class="home-actions" style="justify-content:center;">
-        <a class="button" href="https://promptbase.com/profile/phungfetti?via=phungteacher" target="_blank" rel="noopener noreferrer">
+        <a class="button" href="{{ site.data.site.promptbase_url }}" target="_blank" rel="noopener noreferrer">
           <span class="lang-en">Shop Prompts Now</span>
           <span class="lang-vi">Mua prompt ngay</span>
         </a>

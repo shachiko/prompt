@@ -1,28 +1,16 @@
 brand_name: AutoPrompt Shop
 person_name: Mr. Dinh
-handle: "@phungfetti"
-tagline: Prompt systems that help educators, creators, and sellers move faster.
-email: phungtiennguyendinh@gmail.com
 promptbase_url: https://promptbase.com/profile/phungfetti?via=phungteacher
+email: phungtiennguyendinh@gmail.com
 hourly_rate: "$25/hr"
-primary_cta_label: Browse PromptBase Store
-primary_cta_url: https://promptbase.com/profile/phungfetti?via=phungteacher
-secondary_cta_label: Hire Me for Custom Prompt Systems
-secondary_cta_url: https://promptbase.com/profile/phungfetti?via=phungteacher
-hero_kicker: PromptBase seller • AI educator • prompt architect
-hero_title: Sell smarter with premium AI prompts and conversion-ready content.
-hero_subtitle: I build PromptBase-ready prompts, education workflows, and ecommerce prompt systems designed to save time, raise output quality, and help you ship faster.
-proof:
-  - title: PromptBase Store
-    text: Send buyers directly to your storefront with focused CTAs.
-  - title: SEO-friendly blog
-    text: Publish articles that rank, educate, and pre-sell your prompt offers.
-  - title: Easy daily updates
-    text: Add a new prompt or article by dropping one Markdown file into the repo.
-faq:
-  - q: Why rebuild this as a Jekyll site?
-    a: Because GitHub Pages supports Jekyll directly, which makes prompts, posts, and SEO metadata much easier to manage than one long HTML file.
-  - q: How do I add a new product?
-    a: Create a new file in the _prompts folder, fill in the front matter, add your PromptBase link, and the site updates automatically.
-  - q: How do I publish blog posts every day?
-    a: Add a Markdown file to the _posts folder using the date-title format and GitHub Pages will build the article page and index automatically.
+tagline: Practical AI prompts for education, content, research, and e-commerce.
+hero_kicker: PromptBase seller • AI educator • Prompt architect
+hero_title: Practical AI prompts for education, content, and online selling.
+hero_subtitle: Structured prompt systems designed to save time, improve output quality, and help buyers move faster.
+faqs:
+  - q: Who are these prompts for?
+    a: They are designed for teachers, content creators, researchers, and online sellers who need structured AI workflows and more consistent output.
+  - q: Can I request a custom prompt?
+    a: Yes. Custom work is available for niche prompt systems, workflow audits, education use cases, and PromptBase-ready prompt products.
+  - q: Do you support both English and Vietnamese?
+    a: Yes. The site and support flow are built for both English and Vietnamese users.

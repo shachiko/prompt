@@ -1,32 +1,35 @@
 <footer class="site-footer">
-  <div class="container footer-inner">
-    <div class="footer-brand">
-      <a href="{{ '/' | relative_url }}" class="footer-logo" aria-label="Autoprompt Shop home">
-        <img src="{{ '/assets/img/cat-logo.svg' | relative_url }}" alt="Cat logo" width="28" height="28">
-        <span>Autoprompt Shop</span>
-      </a>
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-brand footer-brand-logo">
+        <img src="{{ '/assets/img/cat-logo.svg' | relative_url }}" alt="Cat logo">
+        <span>{{ site.title }}</span>
+      </div>
+      <p>
+        <span class="lang-en">{{ site.data.site.tagline }}</span>
+        <span class="lang-vi">Các hệ thống prompt giúp giáo viên, nhà sáng tạo và người bán hàng làm việc nhanh hơn, gọn hơn.</span>
+      </p>
     </div>
-
-    <p class="footer-copy">
-      <span class="lang-en">
-        &copy; 2026 Mr. Dinh. Powered by
-        <a href="https://promptbase.com/profile/phungfetti?via=phungteacher" target="_blank" rel="noopener noreferrer">@phungfetti</a>
-        on PromptBase.
-      </span>
-      <span class="lang-vi">
-        &copy; 2026 Mr. Dinh. Vận hành trên PromptBase
-        <a href="https://promptbase.com/profile/phungfetti?via=phungteacher" target="_blank" rel="noopener noreferrer">@phungfetti</a>
-      </span>
+    <div>
+      <h3><span class="lang-en">Explore</span><span class="lang-vi">Khám phá</span></h3>
+      <ul>
+        <li><a href="{{ '/prompts/' | relative_url }}"><span class="lang-en">Prompt catalog</span><span class="lang-vi">Danh mục prompt</span></a></li>
+        <li><a href="{{ '/blog/' | relative_url }}"><span class="lang-en">Articles</span><span class="lang-vi">Bài viết</span></a></li>
+        <li><a href="{{ '/services/' | relative_url }}"><span class="lang-en">Custom work</span><span class="lang-vi">Dịch vụ riêng</span></a></li>
+      </ul>
+    </div>
+    <div>
+      <h3><span class="lang-en">Links</span><span class="lang-vi">Liên kết</span></h3>
+      <ul>
+        <li><a href="{{ site.data.site.promptbase_url }}" target="_blank" rel="noopener"><span class="lang-en">PromptBase store</span><span class="lang-vi">Gian hàng PromptBase</span></a></li>
+        <li><a href="mailto:{{ site.data.site.email }}">{{ site.data.site.email }}</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>
+      <span class="lang-en">© {{ 'now' | date: '%Y' }} {{ site.data.site.person_name }}. Powered by PromptBase @phungfetti.</span>
+      <span class="lang-vi">© {{ 'now' | date: '%Y' }} {{ site.data.site.person_name }}. Vận hành trên PromptBase @phungfetti.</span>
     </p>
-
-    <div class="footer-links">
-      <a href="https://promptbase.com/profile/phungfetti?via=phungteacher" target="_blank" rel="noopener noreferrer">
-        PromptBase
-      </a>
-      <a href="mailto:{{ site.data.site.email }}">
-        <span class="lang-en">Email</span>
-        <span class="lang-vi">Email</span>
-      </a>
-    </div>
   </div>
 </footer>

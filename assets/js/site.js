@@ -1,131 +1,46 @@
-(function () {
-  const STORAGE_KEY = "preferredLanguage";
-  const DEFAULT_LANG = "en";
-  const SUPPORTED_LANGS = ["en", "vi"];
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.querySelector('[data-menu-toggle]');
+  const menu = document.querySelector('[data-menu]');
 
-  function normalizeLang(lang) {
-    if (!lang) return DEFAULT_LANG;
-    const value = String(lang).toLowerCase().trim();
-    return SUPPORTED_LANGS.includes(value) ? value : DEFAULT_LANG;
-  }
-
-  function getSavedLang() {
-    try {
-      return normalizeLang(localStorage.getItem(STORAGE_KEY));
-    } catch (error) {
-      return DEFAULT_LANG;
-    }
-  }
-
-  function saveLang(lang) {
-    try {
-      localStorage.setItem(STORAGE_KEY, normalizeLang(lang));
-    } catch (error) {
-      // Không làm gì nếu trình duyệt chặn localStorage
-    }
-  }
-
-  function setHtmlLang(lang) {
-    document.documentElement.setAttribute("lang", normalizeLang(lang));
-  }
-
-  function updateLanguageButtons(activeLang) {
-    const selectors = [
-      "[data-lang]",
-      "[data-set-lang]",
-      ".lang-switch button",
-      ".language-switch button",
-      ".language-toggle button",
-      ".lang-toggle button",
-      "#lang-en",
-      "#lang-vi"
-    ];
-
-    const buttons = document.querySelectorAll(selectors.join(","));
-
-    buttons.forEach((button) => {
-      let buttonLang = null;
-
-      if (button.dataset.lang) {
-        buttonLang = button.dataset.lang;
-      } else if (button.dataset.setLang) {
-        buttonLang = button.dataset.setLang;
-      } else if (button.id === "lang-en") {
-        buttonLang = "en";
-      } else if (button.id === "lang-vi") {
-        buttonLang = "vi";
-      } else {
-        const text = button.textContent.toLowerCase();
-        if (text.includes("en")) buttonLang = "en";
-        if (text.includes("vi")) buttonLang = "vi";
-      }
-
-      if (!buttonLang) return;
-
-      const isActive = normalizeLang(buttonLang) === activeLang;
-
-      button.classList.toggle("active", isActive);
-      button.classList.toggle("is-active", isActive);
-      button.setAttribute("aria-pressed", isActive ? "true" : "false");
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('open');
     });
   }
 
-  function applyLanguage(lang) {
-    const finalLang = normalizeLang(lang);
-    setHtmlLang(finalLang);
-    saveLang(finalLang);
-    updateLanguageButtons(finalLang);
-  }
+  const chips = document.querySelectorAll('[data-filter-chip]');
+  const cards = document.querySelectorAll('[data-filter-card]');
 
-  function bindLanguageButtons() {
-    const selectors = [
-      "[data-lang]",
-      "[data-set-lang]",
-      "#lang-en",
-      "#lang-vi",
-      ".lang-switch button",
-      ".language-switch button",
-      ".language-toggle button",
-      ".lang-toggle button"
-    ];
+  if (chips.length && cards.length) {
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        const value = chip.dataset.filterChip;
+        chips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
 
-    const buttons = document.querySelectorAll(selectors.join(","));
-
-    buttons.forEach((button) => {
-      button.addEventListener("click", function (event) {
-        event.preventDefault();
-
-        let selectedLang = null;
-
-        if (this.dataset.lang) {
-          selectedLang = this.dataset.lang;
-        } else if (this.dataset.setLang) {
-          selectedLang = this.dataset.setLang;
-        } else if (this.id === "lang-en") {
-          selectedLang = "en";
-        } else if (this.id === "lang-vi") {
-          selectedLang = "vi";
-        } else {
-          const text = this.textContent.toLowerCase();
-          if (text.includes("en")) selectedLang = "en";
-          if (text.includes("vi")) selectedLang = "vi";
-        }
-
-        if (!selectedLang) return;
-        applyLanguage(selectedLang);
+        cards.forEach(card => {
+          const category = card.dataset.filterCard;
+          const show = value === 'all' || category === value;
+          card.classList.toggle('hide', !show);
+        });
       });
     });
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
-    // Mặc định luôn là tiếng Anh khi vào web lần đầu
-    const initialLang = getSavedLang() || DEFAULT_LANG;
-    applyLanguage(initialLang);
-    bindLanguageButtons();
-  });
-
-  // Cho phép gọi từ HTML nếu cần: onclick="setSiteLanguage('vi')"
-  window.setSiteLanguage = function (lang) {
-    applyLanguage(lang);
+  const langButtons = document.querySelectorAll('[data-lang-switch]');
+  const root = document.documentElement;
+  const savedLang = localStorage.getItem('siteLanguage');
+  const setLanguage = (lang) => {
+    root.setAttribute('lang', lang);
+    localStorage.setItem('siteLanguage', lang);
+    langButtons.forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.langSwitch === lang);
+    });
   };
-})();
+
+  setLanguage(savedLang || root.getAttribute('lang') || 'en');
+
+  langButtons.forEach(btn => {
+    btn.addEventListener('click', () => setLanguage(btn.dataset.langSwitch));
+  });
+});
