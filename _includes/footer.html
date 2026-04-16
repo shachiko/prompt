@@ -1,26 +1,35 @@
 <footer class="site-footer">
   <div class="container footer-grid">
     <div>
-      <div class="footer-brand">{{ site.title }}</div>
-      <p>{{ site.data.site.tagline }}</p>
+      <div class="footer-brand footer-brand-logo">
+        <img src="{{ '/assets/img/cat-logo.svg' | relative_url }}" alt="Cat logo">
+        <span>{{ site.title }}</span>
+      </div>
+      <p>
+        <span class="lang-en">{{ site.data.site.tagline }}</span>
+        <span class="lang-vi">Hệ thống prompt giúp giáo viên, nhà sáng tạo và người bán hàng làm việc nhanh hơn, gọn hơn.</span>
+      </p>
     </div>
     <div>
-      <h3>Explore</h3>
+      <h3><span class="lang-en">Explore</span><span class="lang-vi">Khám phá</span></h3>
       <ul>
-        <li><a href="{{ '/prompts/' | relative_url }}">Prompt catalog</a></li>
-        <li><a href="{{ '/blog/' | relative_url }}">Articles</a></li>
-        <li><a href="{{ '/services/' | relative_url }}">Custom work</a></li>
+        <li><a href="{{ '/prompts/' | relative_url }}"><span class="lang-en">Prompt catalog</span><span class="lang-vi">Danh mục prompt</span></a></li>
+        <li><a href="{{ '/blog/' | relative_url }}"><span class="lang-en">Articles</span><span class="lang-vi">Bài viết</span></a></li>
+        <li><a href="{{ '/services/' | relative_url }}"><span class="lang-en">Custom work</span><span class="lang-vi">Dịch vụ riêng</span></a></li>
       </ul>
     </div>
     <div>
-      <h3>Links</h3>
+      <h3><span class="lang-en">Links</span><span class="lang-vi">Liên kết</span></h3>
       <ul>
-        <li><a href="{{ site.data.site.promptbase_url }}" target="_blank" rel="noopener">PromptBase store</a></li>
-        <li><a href="mailto:{{ site.data.site.email }}">{{ site.data.site.email }}</a></li>
+        <li><a href="{{ site.data.site.promptbase_url }}" target="_blank" rel="noopener"><span class="lang-en">PromptBase store</span><span class="lang-vi">Gian hàng PromptBase</span></a></li>
+        <li><a href="mailto:{{ site.data.site.email }}?subject=Prompt%20Inquiry%20from%20autoprompt.shop">{{ site.data.site.email }}</a></li>
       </ul>
     </div>
   </div>
   <div class="container footer-bottom">
-    <p>© {{ 'now' | date: '%Y' }} {{ site.data.site.person_name }}. Built for GitHub Pages.</p>
+    <p>
+      <span class="lang-en">© {{ 'now' | date: '%Y' }} {{ site.data.site.person_name }}. Built for GitHub Pages.</span>
+      <span class="lang-vi">© {{ 'now' | date: '%Y' }} {{ site.data.site.person_name }}. Vận hành trên GitHub Pages.</span>
+    </p>
   </div>
 </footer>

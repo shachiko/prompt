@@ -12,6 +12,7 @@
 <title>{{ meta_title }}</title>
 <meta name="description" content="{{ meta_description | escape }}">
 <link rel="canonical" href="{{ canonical_url }}">
+<link rel="icon" type="image/svg+xml" href="{{ '/assets/img/cat-logo.svg' | relative_url }}">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
 <meta property="og:title" content="{{ meta_title | escape }}">

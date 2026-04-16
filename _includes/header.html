@@ -1,15 +1,24 @@
 <header class="site-header">
   <div class="container header-inner">
-    <a class="logo" href="{{ '/' | relative_url }}">AutoPrompt<span>Shop</span></a>
-    <button class="menu-toggle" type="button" aria-label="Toggle menu" data-menu-toggle>
-      <span></span><span></span><span></span>
-    </button>
+    <a class="logo" href="{{ '/' | relative_url }}" aria-label="AutoPrompt Shop home">
+      <img src="{{ '/assets/img/cat-logo.svg' | relative_url }}" alt="Cat logo">
+      <span class="logo-text">AutoPrompt<span>Shop</span></span>
+    </a>
+    <div class="header-actions">
+      <div class="lang-switcher" aria-label="Language switcher">
+        <button type="button" class="lang-switch active" data-lang-switch="en">EN</button>
+        <button type="button" class="lang-switch" data-lang-switch="vi">VI</button>
+      </div>
+      <button class="menu-toggle" type="button" aria-label="Toggle menu" data-menu-toggle>
+        <span></span><span></span><span></span>
+      </button>
+    </div>
     <nav class="site-nav" data-menu>
-      <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="active"{% endif %}>Home</a>
-      <a href="{{ '/prompts/' | relative_url }}"{% if page.url contains '/prompts/' %} class="active"{% endif %}>Prompts</a>
-      <a href="{{ '/blog/' | relative_url }}"{% if page.url contains '/blog/' %} class="active"{% endif %}>Blog</a>
-      <a href="{{ '/services/' | relative_url }}"{% if page.url contains '/services/' %} class="active"{% endif %}>Services</a>
-      <a class="button button-small button-outline" href="{{ site.data.site.promptbase_url }}" target="_blank" rel="noopener">PromptBase</a>
+      <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="active"{% endif %}><span class="lang-en">Home</span><span class="lang-vi">Trang chủ</span></a>
+      <a href="{{ '/prompts/' | relative_url }}"{% if page.url contains '/prompts/' %} class="active"{% endif %}><span class="lang-en">Prompts</span><span class="lang-vi">Prompt</span></a>
+      <a href="{{ '/blog/' | relative_url }}"{% if page.url contains '/blog/' %} class="active"{% endif %}><span class="lang-en">Blog</span><span class="lang-vi">Bài viết</span></a>
+      <a href="{{ '/services/' | relative_url }}"{% if page.url contains '/services/' %} class="active"{% endif %}><span class="lang-en">Services</span><span class="lang-vi">Dịch vụ</span></a>
+      <a class="button button-small button-outline" href="{{ site.data.site.promptbase_url }}" target="_blank" rel="noopener"><span class="lang-en">PromptBase</span><span class="lang-vi">Cửa hàng PromptBase</span></a>
     </nav>
   </div>
 </header>

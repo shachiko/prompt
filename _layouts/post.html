@@ -3,7 +3,7 @@ layout: default
 ---
 <section class="page-hero page-hero-compact">
   <div class="container narrow">
-    <p class="eyebrow">Blog article</p>
+    <p class="eyebrow"><span class="lang-en">Blog article</span><span class="lang-vi">Bài viết blog</span></p>
     <h1>{{ page.title }}</h1>
     <p class="page-meta">{{ page.date | date: '%B %d, %Y' }} · {{ page.category | default: 'Prompt Strategy' }}</p>
     {% if page.description %}<p class="lead">{{ page.description }}</p>{% endif %}
@@ -15,10 +15,10 @@ layout: default
       {{ content }}
     </article>
     <aside class="article-sidebar card">
-      <h2>What next?</h2>
-      <p>Use the article to attract search traffic, then send readers into a focused prompt page or your PromptBase store.</p>
-      <a class="button button-full" href="{{ site.data.site.promptbase_url }}" target="_blank" rel="noopener">Visit PromptBase store</a>
-      <a class="button button-full button-outline" href="{{ '/prompts/' | relative_url }}">View all prompts</a>
+      <h2><span class="lang-en">What next?</span><span class="lang-vi">Bước tiếp theo?</span></h2>
+      <p><span class="lang-en">Use the article to attract search traffic, then send readers into a focused prompt page or your PromptBase store.</span><span class="lang-vi">Dùng bài viết để kéo traffic tìm kiếm, rồi dẫn người đọc sang trang prompt phù hợp hoặc thẳng tới gian hàng PromptBase.</span></p>
+      <a class="button button-full" href="{{ site.data.site.promptbase_url }}" target="_blank" rel="noopener"><span class="lang-en">Visit PromptBase store</span><span class="lang-vi">Mở gian hàng PromptBase</span></a>
+      <a class="button button-full button-outline" href="{{ '/prompts/' | relative_url }}"><span class="lang-en">View all prompts</span><span class="lang-vi">Xem tất cả prompt</span></a>
     </aside>
   </div>
 </section>

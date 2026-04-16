@@ -9,8 +9,8 @@ permalink: /blog/
 <section class="page-hero">
   <div class="container">
     <p class="eyebrow">Blog</p>
-    <h1>Write useful articles. Pre-sell the prompt. Repeat.</h1>
-    <p class="lead">This archive is built from Jekyll posts, so every article gets its own URL, metadata, and archive listing automatically.</p>
+    <h1><span class="lang-en">Write useful articles. Pre-sell the prompt. Repeat.</span><span class="lang-vi">Viết bài hữu ích. Bán trước ý tưởng của prompt. Lặp lại đều.</span></h1>
+    <p class="lead"><span class="lang-en">This archive is built from Jekyll posts, so every article gets its own URL, metadata, and archive listing automatically.</span><span class="lang-vi">Trang lưu trữ này được dựng từ Jekyll posts, nên mỗi bài viết sẽ tự có URL, metadata và xuất hiện trong archive.</span></p>
   </div>
 </section>
 
@@ -22,7 +22,7 @@ permalink: /blog/
         <p class="page-meta">{{ post.date | date: '%B %d, %Y' }} · {{ post.category | default: 'Prompt Strategy' }}</p>
         <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
         <p>{{ post.description }}</p>
-        <a href="{{ post.url | relative_url }}">Read article →</a>
+        <a href="{{ post.url | relative_url }}"><span class="lang-en">Read article →</span><span class="lang-vi">Đọc bài →</span></a>
       </div>
     </article>
     {% endfor %}

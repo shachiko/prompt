@@ -8,16 +8,16 @@ permalink: /prompts/
 
 <section class="page-hero">
   <div class="container">
-    <p class="eyebrow">Prompt catalog</p>
-    <h1>Every prompt gets a proper landing page.</h1>
-    <p class="lead">Filter by category, click into the product page, then send hot buyers to PromptBase.</p>
+    <p class="eyebrow"><span class="lang-en">Prompt catalog</span><span class="lang-vi">Danh mục prompt</span></p>
+    <h1><span class="lang-en">Every prompt gets a proper landing page.</span><span class="lang-vi">Mỗi prompt đều có landing page tử tế.</span></h1>
+    <p class="lead"><span class="lang-en">Filter by category, click into the product page, then send hot buyers to PromptBase.</span><span class="lang-vi">Lọc theo danh mục, mở trang sản phẩm, rồi dẫn khách nóng sang PromptBase để chốt.</span></p>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
     <div class="filter-bar">
-      <button class="filter-chip active" data-filter-chip="all">All</button>
+      <button class="filter-chip active" data-filter-chip="all"><span class="lang-en">All</span><span class="lang-vi">Tất cả</span></button>
       <button class="filter-chip" data-filter-chip="education">Education</button>
       <button class="filter-chip" data-filter-chip="ecommerce">Ecommerce</button>
       <button class="filter-chip" data-filter-chip="coding">Coding</button>
@@ -37,7 +37,7 @@ permalink: /prompts/
           <p>{{ prompt.description }}</p>
           <div class="card-meta">
             <span class="price">${{ prompt.price }}</span>
-            <a href="{{ prompt.url | relative_url }}">View details →</a>
+            <a href="{{ prompt.url | relative_url }}"><span class="lang-en">View details →</span><span class="lang-vi">Xem chi tiết →</span></a>
           </div>
         </div>
       </article>

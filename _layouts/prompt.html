@@ -3,13 +3,13 @@ layout: default
 ---
 <section class="page-hero page-hero-compact">
   <div class="container narrow">
-    <p class="eyebrow">Prompt page</p>
+    <p class="eyebrow"><span class="lang-en">Prompt page</span><span class="lang-vi">Trang prompt</span></p>
     <h1>{{ page.title }}</h1>
     <p class="lead">{{ page.description }}</p>
     <div class="pill-row">
-      {% if page.model %}<span class="pill">Model: {{ page.model }}</span>{% endif %}
-      {% if page.category %}<span class="pill">Category: {{ page.category }}</span>{% endif %}
-      {% if page.price %}<span class="pill">Price: ${{ page.price }}</span>{% endif %}
+      {% if page.model %}<span class="pill"><span class="lang-en">Model:</span><span class="lang-vi">Mô hình:</span>&nbsp;{{ page.model }}</span>{% endif %}
+      {% if page.category %}<span class="pill"><span class="lang-en">Category:</span><span class="lang-vi">Danh mục:</span>&nbsp;{{ page.category }}</span>{% endif %}
+      {% if page.price %}<span class="pill"><span class="lang-en">Price:</span><span class="lang-vi">Giá:</span>&nbsp;${{ page.price }}</span>{% endif %}
     </div>
   </div>
 </section>
@@ -20,10 +20,10 @@ layout: default
     </article>
     <aside class="prompt-sidebar card sticky-card">
       <div class="price-tag">${{ page.price }}</div>
-      <p><strong>Best for:</strong> {{ page.best_for }}</p>
-      {% if page.outcome %}<p><strong>Outcome:</strong> {{ page.outcome }}</p>{% endif %}
-      <a class="button button-full" href="{{ page.promptbase_url }}" target="_blank" rel="noopener">Buy on PromptBase</a>
-      <a class="button button-full button-outline" href="{{ '/services/' | relative_url }}">Need a custom version?</a>
+      <p><strong><span class="lang-en">Best for:</span><span class="lang-vi">Phù hợp nhất cho:</span></strong> {{ page.best_for }}</p>
+      {% if page.outcome %}<p><strong><span class="lang-en">Outcome:</span><span class="lang-vi">Kết quả:</span></strong> {{ page.outcome }}</p>{% endif %}
+      <a class="button button-full" href="{{ page.promptbase_url }}" target="_blank" rel="noopener"><span class="lang-en">Buy on PromptBase</span><span class="lang-vi">Mua trên PromptBase</span></a>
+      <a class="button button-full button-outline" href="{{ '/services/' | relative_url }}"><span class="lang-en">Need a custom version?</span><span class="lang-vi">Cần bản chỉnh riêng?</span></a>
     </aside>
   </div>
 </section>
