@@ -1,1 +1,40 @@
+{% assign item = include.item %}
+{% assign slug = item.slug | default: page.slug %}
+{% assign title = item.title | default: page.title %}
+{% assign model = item.model | default: page.model %}
+{% assign href = include.href | default: item.url %}
+{% assign media_class = include.media_class | default: 'home-product__media' %}
+{% assign placeholder_class = include.placeholder_class | default: 'thumb' %}
+{% assign linked = include.linked | default: 'true' %}
 
+{% assign jpg_path = '/assets/img/prompts/' | append: slug | append: '.jpg' %}
+{% assign jpeg_path = '/assets/img/prompts/' | append: slug | append: '.jpeg' %}
+{% assign png_path = '/assets/img/prompts/' | append: slug | append: '.png' %}
+{% assign webp_path = '/assets/img/prompts/' | append: slug | append: '.webp' %}
+
+{% assign image_file = site.static_files | where: 'path', jpg_path | first %}
+{% unless image_file %}
+  {% assign image_file = site.static_files | where: 'path', jpeg_path | first %}
+{% endunless %}
+{% unless image_file %}
+  {% assign image_file = site.static_files | where: 'path', png_path | first %}
+{% endunless %}
+{% unless image_file %}
+  {% assign image_file = site.static_files | where: 'path', webp_path | first %}
+{% endunless %}
+
+{% if image_file %}
+  {% if linked == 'true' %}
+    <a class="{{ media_class }}" href="{{ href | relative_url }}">
+      <img src="{{ image_file.path | relative_url }}" alt="{{ title }}">
+    </a>
+  {% else %}
+    <div class="{{ media_class }}">
+      <img src="{{ image_file.path | relative_url }}" alt="{{ title }}">
+    </div>
+  {% endif %}
+{% else %}
+  <div class="{{ placeholder_class }}">
+    <span>{{ model }}</span>
+  </div>
+{% endif %}
