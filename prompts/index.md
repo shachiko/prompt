@@ -27,7 +27,7 @@ permalink: /prompts/
       {% assign prompt_list = site.prompts | sort: 'weight' %}
       {% for prompt in prompt_list %}
       <article class="prompt-card card" data-filter-card="{{ prompt.filter }}">
-        <div class="thumb"><span>{{ prompt.model }}</span></div>
+        {% include prompt-thumb.html item=prompt href=prompt.url media_class="home-product__media" placeholder_class="thumb" linked="true" %}
         <div class="prompt-card-body">
           <div class="badge-row">
             <span class="badge">{{ prompt.category }}</span>
