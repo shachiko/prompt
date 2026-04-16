@@ -419,11 +419,7 @@ permalink: /
     <div class="home-cards">
       {% for prompt in featured_prompts limit: 3 %}
         <article class="home-card home-product">
-          {% if prompt.image %}
-            <a class="home-product__media" href="{{ prompt.url | relative_url }}">
-              <img src="{{ prompt.image | relative_url }}" alt="{{ prompt.title }}">
-            </a>
-          {% endif %}
+          {% include prompt-thumb.html item=prompt href=prompt.url media_class="home-product__media" placeholder_class="thumb" linked="true" %}
 
           <div class="home-product__body">
             {% if prompt.model %}
