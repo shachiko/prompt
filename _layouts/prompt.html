@@ -16,8 +16,10 @@ layout: default
 <section class="section">
   <div class="container prompt-layout">
     <article class="article-content card card-soft">
-      {{ content }}
-    </article>
+  {% include prompt-thumb.html item=page media_class="prompt-detail-image" placeholder_class="thumb" linked="false" %}
+
+  {{ content }}
+</article>
     <aside class="prompt-sidebar card sticky-card">
       <div class="price-tag">${{ page.price }}</div>
       <p><strong><span class="lang-en">Best for:</span><span class="lang-vi">Phù hợp nhất cho:</span></strong> {{ page.best_for }}</p>
