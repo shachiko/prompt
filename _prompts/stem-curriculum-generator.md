@@ -11,6 +11,7 @@ outcome: Faster lesson planning with consistent structure
 promptbase_url: https://promptbase.com/profile/phungfetti?via=phungteacher
 featured: true
 weight: 1
+image: /assets/img/prompts/AI storybook typography generator showcase.png
 ---
 
 ## What this prompt is for
