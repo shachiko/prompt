@@ -276,3 +276,14 @@ html[lang="vi"] .lang-en { display: none !important; }
   .lang-switcher { order: -1; }
   .logo img, .footer-brand-logo img { width: 34px; height: 34px; border-radius: 12px; }
 }
+.prompt-detail-image {
+  margin-bottom: 20px;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.prompt-detail-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
