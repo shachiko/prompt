@@ -1,3 +1,7 @@
+document.documentElement.setAttribute(
+  'lang',
+  localStorage.getItem('preferredLanguage') || 'en'
+);
 document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.querySelector('[data-menu-toggle]');
   const menu = document.querySelector('[data-menu]');
