@@ -11,6 +11,7 @@ outcome: Better product visuals without hiring a studio
 promptbase_url: https://promptbase.com/profile/phungfetti?via=phungteacher
 featured: true
 weight: 2
+image: assets/img/prompts/ChatGPT Image Apr 9, 2026, 01_43_25 PM.png
 ---
 
 ## What this prompt is for
