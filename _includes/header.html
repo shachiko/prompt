@@ -1,0 +1,15 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="{{ '/' | relative_url }}">AutoPrompt<span>Shop</span></a>
+    <button class="menu-toggle" type="button" aria-label="Toggle menu" data-menu-toggle>
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" data-menu>
+      <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="active"{% endif %}>Home</a>
+      <a href="{{ '/prompts/' | relative_url }}"{% if page.url contains '/prompts/' %} class="active"{% endif %}>Prompts</a>
+      <a href="{{ '/blog/' | relative_url }}"{% if page.url contains '/blog/' %} class="active"{% endif %}>Blog</a>
+      <a href="{{ '/services/' | relative_url }}"{% if page.url contains '/services/' %} class="active"{% endif %}>Services</a>
+      <a class="button button-small button-outline" href="{{ site.data.site.promptbase_url }}" target="_blank" rel="noopener">PromptBase</a>
+    </nav>
+  </div>
+</header>

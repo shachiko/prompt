@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<section class="page-hero page-hero-compact">
+  <div class="container narrow">
+    <p class="eyebrow">Prompt page</p>
+    <h1>{{ page.title }}</h1>
+    <p class="lead">{{ page.description }}</p>
+    <div class="pill-row">
+      {% if page.model %}<span class="pill">Model: {{ page.model }}</span>{% endif %}
+      {% if page.category %}<span class="pill">Category: {{ page.category }}</span>{% endif %}
+      {% if page.price %}<span class="pill">Price: ${{ page.price }}</span>{% endif %}
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container prompt-layout">
+    <article class="article-content card card-soft">
+      {{ content }}
+    </article>
+    <aside class="prompt-sidebar card sticky-card">
+      <div class="price-tag">${{ page.price }}</div>
+      <p><strong>Best for:</strong> {{ page.best_for }}</p>
+      {% if page.outcome %}<p><strong>Outcome:</strong> {{ page.outcome }}</p>{% endif %}
+      <a class="button button-full" href="{{ page.promptbase_url }}" target="_blank" rel="noopener">Buy on PromptBase</a>
+      <a class="button button-full button-outline" href="{{ '/services/' | relative_url }}">Need a custom version?</a>
+    </aside>
+  </div>
+</section>

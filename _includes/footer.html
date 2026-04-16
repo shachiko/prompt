@@ -1,0 +1,26 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-brand">{{ site.title }}</div>
+      <p>{{ site.data.site.tagline }}</p>
+    </div>
+    <div>
+      <h3>Explore</h3>
+      <ul>
+        <li><a href="{{ '/prompts/' | relative_url }}">Prompt catalog</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}">Articles</a></li>
+        <li><a href="{{ '/services/' | relative_url }}">Custom work</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Links</h3>
+      <ul>
+        <li><a href="{{ site.data.site.promptbase_url }}" target="_blank" rel="noopener">PromptBase store</a></li>
+        <li><a href="mailto:{{ site.data.site.email }}">{{ site.data.site.email }}</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© {{ 'now' | date: '%Y' }} {{ site.data.site.person_name }}. Built for GitHub Pages.</p>
+  </div>
+</footer>

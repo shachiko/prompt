@@ -1,0 +1,85 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% assign meta_title = page.seo_title | default: page.title | append: ' | ' | append: site.title %}
+{% assign meta_description = page.description | default: site.description %}
+{% assign meta_image = page.image | default: site.image | default: '/assets/img/og-cover.svg' %}
+{% if meta_image contains 'http' %}
+  {% assign absolute_image = meta_image %}
+{% else %}
+  {% assign absolute_image = site.url | append: meta_image %}
+{% endif %}
+{% assign canonical_url = page.url | replace:'index.html','' | absolute_url %}
+<title>{{ meta_title }}</title>
+<meta name="description" content="{{ meta_description | escape }}">
+<link rel="canonical" href="{{ canonical_url }}">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+<meta property="og:title" content="{{ meta_title | escape }}">
+<meta property="og:description" content="{{ meta_description | escape }}">
+<meta property="og:url" content="{{ canonical_url }}">
+<meta property="og:image" content="{{ absolute_image }}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ meta_title | escape }}">
+<meta name="twitter:description" content="{{ meta_description | escape }}">
+<meta name="twitter:image" content="{{ absolute_image }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+{% if page.layout == 'post' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ meta_description | jsonify }},
+  "author": {
+    "@type": "Person",
+    "name": {{ site.data.site.person_name | jsonify }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ site.title | jsonify }},
+    "url": {{ site.url | jsonify }}
+  },
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+  "dateModified": {{ page.date | date_to_xmlschema | jsonify }},
+  "mainEntityOfPage": {{ canonical_url | jsonify }},
+  "image": {{ absolute_image | jsonify }}
+}
+</script>
+{% elsif page.layout == 'prompt' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": {{ page.title | jsonify }},
+  "description": {{ meta_description | jsonify }},
+  "image": {{ absolute_image | jsonify }},
+  "brand": {
+    "@type": "Brand",
+    "name": {{ site.title | jsonify }}
+  },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": {{ page.price | default: '0' | jsonify }},
+    "url": {{ page.promptbase_url | jsonify }},
+    "availability": "https://schema.org/InStock"
+  }
+}
+</script>
+{% else %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ site.data.site.person_name | jsonify }},
+  "url": {{ site.url | jsonify }},
+  "jobTitle": "AI Educator and Prompt Architect",
+  "brand": {{ site.title | jsonify }},
+  "sameAs": [{{ site.data.site.promptbase_url | jsonify }}]
+}
+</script>
+{% endif %}
