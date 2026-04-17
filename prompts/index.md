@@ -263,13 +263,26 @@ permalink: /prompts/
     {% assign sorted_prompts = site.prompts | sort: 'weight' %}
     {% for prompt in sorted_prompts %}
       <article class="prompt-card" data-filter-card="{{ prompt.filter | downcase }}">
-        {% if prompt.image %}
-  {% assign prompt_image_src = prompt.image %}
-  {% unless prompt_image_src contains '://' %}
-    {% assign prompt_image_src = prompt_image_src | relative_url %}
-  {% endunless %}
+        {% assign slug = prompt.slug %}
+{% assign png_path = '/assets/img/' | append: slug | append: '.png' %}
+{% assign jpg_path = '/assets/img/' | append: slug | append: '.jpg' %}
+{% assign jpeg_path = '/assets/img/' | append: slug | append: '.jpeg' %}
+{% assign webp_path = '/assets/img/' | append: slug | append: '.webp' %}
+
+{% assign prompt_image = site.static_files | where: 'path', png_path | first %}
+{% unless prompt_image %}
+  {% assign prompt_image = site.static_files | where: 'path', jpg_path | first %}
+{% endunless %}
+{% unless prompt_image %}
+  {% assign prompt_image = site.static_files | where: 'path', jpeg_path | first %}
+{% endunless %}
+{% unless prompt_image %}
+  {% assign prompt_image = site.static_files | where: 'path', webp_path | first %}
+{% endunless %}
+
+{% if prompt_image %}
   <a class="prompt-card-media" href="{{ prompt.url | relative_url }}">
-    <img src="{{ prompt_image_src }}" alt="{{ prompt.title }}" loading="lazy">
+    <img src="{{ prompt_image.path | relative_url }}" alt="{{ prompt.title }}" loading="lazy">
   </a>
 {% else %}
   <div class="prompt-card-placeholder">
