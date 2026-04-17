@@ -264,14 +264,18 @@ permalink: /prompts/
     {% for prompt in sorted_prompts %}
       <article class="prompt-card" data-filter-card="{{ prompt.filter | downcase }}">
         {% if prompt.image %}
-          <a class="prompt-card-media" href="{{ prompt.url | relative_url }}">
-            <img src="{{ prompt.image | relative_url }}" alt="{{ prompt.title }}">
-          </a>
-        {% else %}
-          <div class="prompt-card-placeholder">
-            <span>{{ prompt.model }}</span>
-          </div>
-        {% endif %}
+  {% assign prompt_image_src = prompt.image %}
+  {% unless prompt_image_src contains '://' %}
+    {% assign prompt_image_src = prompt_image_src | relative_url %}
+  {% endunless %}
+  <a class="prompt-card-media" href="{{ prompt.url | relative_url }}">
+    <img src="{{ prompt_image_src }}" alt="{{ prompt.title }}" loading="lazy">
+  </a>
+{% else %}
+  <div class="prompt-card-placeholder">
+    <span>{{ prompt.model }}</span>
+  </div>
+{% endif %}
 
         <div class="prompt-card-body">
           <div class="prompt-card-tags">
